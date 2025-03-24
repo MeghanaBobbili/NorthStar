@@ -57,6 +57,7 @@ export default function Home() {
   ];
 
   // Sample services data
+  /*
   const services = [
     {
       id: 1,
@@ -87,31 +88,32 @@ export default function Home() {
       link: "/services/investment",
     },
   ];
+  */
 
   // Ongoing projects in Hyderabad
   const hyderabadProjects = [
     {
       title: "NORTHSTAR SP PALACIO",
       subtitle: "Premium 3 and 4 BHK apartments in Abids, Hyderabad",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
+      image: "https://northstarhomes.in/assets/images/sp_palacio-banner1.jpg",
       link: "/hyderabad/ongoing/sp-palacio",
     },
     {
       title: "ALLURA",
       subtitle: "LUXURY VILLAS IN KOKAPET, HYDERABAD",
-      image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop",
+      image: "https://northstarhomes.in/assets/images/allura-banner2.jpg",
       link: "/hyderabad/ongoing/allura",
     },
     {
       title: "SANCTUARY, MAHESHWARAM",
       subtitle: "Premium Plots & Villas near Tukkuguda in Srisailam Highway",
-      image: "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?q=80&w=2025&auto=format&fit=crop",
+      image: "https://northstarhomes.in/assets/images/sanctuary/sanctuary-thumbnail.jpg",
       link: "/hyderabad/ongoing/sanctuary",
     },
     {
       title: "AIRPORT BOULEVARD COMMERCIAL",
       subtitle: "Commercial property IN TUKKUGUDA, HYDERABAD, NEAR SHAMSHABAD AIRPORT",
-      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop",
+      image: "https://northstarhomes.in/assets/images/airport-banner.jpg",
       link: "/hyderabad/ongoing/airport-boulevard-commercial",
     },
   ];
@@ -121,13 +123,13 @@ export default function Home() {
     {
       title: "PARK AVENUE",
       subtitle: "PARK AVE - 2, 2.5, 3 BHK PREMIUM APARTMENTS AT MADHURAWADA VISAKHAPATNAM",
-      image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop",
+      image: "https://northstarhomes.in/assets/images/parkave-banner2.jpg",
       link: "/vizag/ongoing/park-avenue",
     },
     {
       title: "GOLDEN VALLEY",
       subtitle: "PREMIUM APARTMENTS AT MADHURAWADA VISAKHAPATNAM - GOLDEN VALLEY",
-      image: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?q=80&w=2070&auto=format&fit=crop",
+      image: "https://northstarhomes.in/assets/images/goldenvalley/BUILDING01.jpg",
       link: "/vizag/ongoing/golden-valley",
     },
   ];
@@ -224,7 +226,7 @@ export default function Home() {
             <div className="relative">
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <Image 
-                  src="https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=1974&auto=format&fit=crop" 
+                  src="https://northstarhomes.in/assets/images/house-img.jpeg" 
                   alt="Invest in Your Future with Northstar Homes" 
                   fill
                   style={{ objectFit: "cover" }}
@@ -332,7 +334,7 @@ export default function Home() {
             <div className="relative">
               <div className="relative h-[500px] rounded-lg overflow-hidden shadow-lg">
                 <Image 
-                  src="/images/about-img.jpg" 
+                  src="https://northstarhomes.in/assets/images/sec-one-img.webp" 
                   alt="About Northstar Homes" 
                   fill
                   style={{ objectFit: "cover" }}
@@ -412,6 +414,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
+      {/* 
       <section className="section-padding">
         <div className="container">
           <div className="text-center mb-12">
@@ -428,6 +431,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Testimonials Section */}
       <section className="bg-gray-light section-padding">
@@ -453,45 +457,55 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             <TeamMember 
-              name="Aditya Sharma"
-              position="CEO & Founder"
-              image="/images/team-1.jpg"
+              name="K Laxma Reddy"
+              position="CHAIRMAN"
+              image="https://northstarhomes.in/assets/images/KLaxmaReddyd.jpg"
               socialLinks={{
                 linkedin: "#",
                 twitter: "#",
-                email: "aditya@northstarhomes.in"
+                email: "chairman@northstarhomes.in"
               }}
             />
             <TeamMember 
-              name="Priya Patel"
-              position="Senior Property Consultant"
-              image="/images/team-2.jpg"
+              name="Narayan Rao Gali"
+              position="VICE-CHAIRMAN"
+              image="https://northstarhomes.in/assets/images/SriNarayanRaoGali.jpg"
               socialLinks={{
                 linkedin: "#",
                 twitter: "#",
-                email: "priya@northstarhomes.in"
+                email: "vicechairman@northstarhomes.in"
               }}
             />
             <TeamMember 
-              name="Rahul Mehta"
-              position="Commercial Properties Head"
-              image="/images/team-3.jpg"
+              name="Uttam Korupol"
+              position="MANAGING PARTNER"
+              image="https://northstarhomes.in/assets/images/UttamKorupol.jpg"
               socialLinks={{
                 linkedin: "#",
                 twitter: "#",
-                email: "rahul@northstarhomes.in"
+                email: "managingpartner@northstarhomes.in"
               }}
             />
             <TeamMember 
-              name="Nisha Verma"
-              position="Investment Consultant"
-              image="/images/team-4.jpg"
+              name="Anil Kumar Reddy"
+              position="PROJECT PARTNER, NORTHSTAR HOMES"
+              image="https://northstarhomes.in/assets/images/AnilKumarReddy.jpg"
               socialLinks={{
                 linkedin: "#",
                 twitter: "#",
-                email: "nisha@northstarhomes.in"
+                email: "anil@northstarhomes.in"
+              }}
+            />
+            <TeamMember 
+              name="Amarendra Raju"
+              position="PROJECT PARTNER, NORTHSTAR HOMES"
+              image="https://northstarhomes.in/assets/images/AmarendraRaju.jpg"
+              socialLinks={{
+                linkedin: "#",
+                twitter: "#",
+                email: "amarendra@northstarhomes.in"
               }}
             />
           </div>
@@ -509,53 +523,77 @@ export default function Home() {
               </p>
               
               <div className="space-y-6 mb-8">
-                <div className="flex items-start">
-                  <div className="bg-primary/10 p-3 rounded-full mr-4">
-                    <FaMapMarkerAlt className="text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">Our Location</h3>
-                    <p className="text-gray-600">123 Real Estate Blvd, Mumbai, India 400001</p>
+                {/* Corporate Office */}
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <h3 className="font-bold text-xl mb-4">Corporate Office</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start">
+                      <div className="bg-primary/10 p-3 rounded-full mr-4">
+                        <FaMapMarkerAlt className="text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-1">Location</h4>
+                        <p className="text-gray-600">Plot No.8-2-293/82/A/1057/F1, 2nd Floor, Road No.45 Jubilee Hills, Hyderabad 500033</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="bg-primary/10 p-3 rounded-full mr-4">
+                        <FaPhone className="text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-1">Phone Number</h4>
+                        <p className="text-gray-600">+91 99899 33366</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="bg-primary/10 p-3 rounded-full mr-4">
+                        <FaEnvelope className="text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-1">Email Address</h4>
+                        <p className="text-gray-600">sales@northstar.in</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-primary/10 p-3 rounded-full mr-4">
-                    <FaPhone className="text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">Phone Number</h3>
-                    <p className="text-gray-600">+91 8888 888 888</p>
+
+                {/* Vizag Office */}
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <h3 className="font-bold text-xl mb-4">Vizag Office</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start">
+                      <div className="bg-primary/10 p-3 rounded-full mr-4">
+                        <FaMapMarkerAlt className="text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-1">Location</h4>
+                        <p className="text-gray-600">Plot no. 9-334, S.No: 167, Behind CMR Function Hall, Venkojipalem, Vizag - 530 017</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="bg-primary/10 p-3 rounded-full mr-4">
+                        <FaPhone className="text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-1">Phone Number</h4>
+                        <p className="text-gray-600">+91 99897 30303</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="bg-primary/10 p-3 rounded-full mr-4">
+                        <FaEnvelope className="text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-1">Email Address</h4>
+                        <p className="text-gray-600">sales@northstar.in</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-primary/10 p-3 rounded-full mr-4">
-                    <FaEnvelope className="text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">Email Address</h3>
-                    <p className="text-gray-600">info@northstarhomes.in</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-gray-light p-6 rounded-lg">
-                <h3 className="font-bold text-lg mb-3">Office Hours</h3>
-                <ul className="space-y-2">
-                  <li className="flex justify-between">
-                    <span className="text-gray-700">Monday - Friday</span>
-                    <span className="font-medium">9:00 AM - 7:00 PM</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span className="text-gray-700">Saturday</span>
-                    <span className="font-medium">10:00 AM - 5:00 PM</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span className="text-gray-700">Sunday</span>
-                    <span className="font-medium">Closed</span>
-                  </li>
-                </ul>
               </div>
             </div>
             

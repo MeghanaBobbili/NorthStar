@@ -10,14 +10,14 @@ export default function VizagOngoingPage() {
       id: 1,
       title: "PARK AVENUE",
       subtitle: "Premium Apartments in Yendada",
-      image: "/images/property-1.jpg",
+      image: "https://northstarhomes.in/assets/images/parkave01.jpg",
       link: "/vizag/ongoing/park-avenue"
     },
     {
       id: 2,
       title: "GOLDEN VALLEY",
       subtitle: "Luxury Villas in Rushikonda",
-      image: "/images/property-2.jpg",
+      image: "https://northstarhomes.in/assets/images/GOLDEN-VALLEY01.jpg",
       link: "/vizag/ongoing/golden-valley"
     }
   ];

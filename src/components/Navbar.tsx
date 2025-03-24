@@ -39,10 +39,6 @@ const menuItems = [
     ],
   },
   {
-    name: "Policies",
-    path: "/policies",
-  },
-  {
     name: "Gallery",
     path: "/gallery",
   },

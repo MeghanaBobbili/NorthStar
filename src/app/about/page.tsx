@@ -8,46 +8,57 @@ export default function AboutPage() {
   const teamMembers = [
     {
       id: 1,
-      name: "Rajesh Kumar",
-      position: "Founder & CEO",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
+      name: "K Laxma Reddy",
+      position: "CHAIRMAN",
+      image: "https://northstarhomes.in/assets/images/KLaxmaReddyd.jpg",
       socialLinks: {
-        twitter: "https://twitter.com",
-        linkedin: "https://linkedin.com",
-        email: "rajesh@northstarhomes.com",
+        twitter: "#",
+        linkedin: "#",
+        email: "chairman@northstarhomes.in",
       },
     },
     {
       id: 2,
-      name: "Priya Sharma",
-      position: "Chief Operating Officer",
-      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1974&auto=format&fit=crop",
+      name: "Narayan Rao Gali",
+      position: "VICE-CHAIRMAN",
+      image: "https://northstarhomes.in/assets/images/SriNarayanRaoGali.jpg",
       socialLinks: {
-        twitter: "https://twitter.com",
-        linkedin: "https://linkedin.com",
-        email: "priya@northstarhomes.com",
+        twitter: "#",
+        linkedin: "#",
+        email: "vicechairman@northstarhomes.in",
       },
     },
     {
       id: 3,
-      name: "Arun Reddy",
-      position: "Sales Director",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop",
+      name: "Uttam Korupol",
+      position: "MANAGING PARTNER",
+      image: "https://northstarhomes.in/assets/images/UttamKorupol.jpg",
       socialLinks: {
-        twitter: "https://twitter.com",
-        linkedin: "https://linkedin.com",
-        email: "arun@northstarhomes.com",
+        twitter: "#",
+        linkedin: "#",
+        email: "managingpartner@northstarhomes.in",
       },
     },
     {
       id: 4,
-      name: "Sneha Patel",
-      position: "Marketing Manager",
-      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2071&auto=format&fit=crop",
+      name: "Anil Kumar Reddy",
+      position: "PROJECT PARTNER, NORTHSTAR HOMES",
+      image: "https://northstarhomes.in/assets/images/AnilKumarReddy.jpg",
       socialLinks: {
-        twitter: "https://twitter.com",
-        linkedin: "https://linkedin.com",
-        email: "sneha@northstarhomes.com",
+        twitter: "#",
+        linkedin: "#",
+        email: "anil@northstarhomes.in",
+      },
+    },
+    {
+      id: 5,
+      name: "Amarendra Raju",
+      position: "PROJECT PARTNER, NORTHSTAR HOMES",
+      image: "https://northstarhomes.in/assets/images/AmarendraRaju.jpg",
+      socialLinks: {
+        twitter: "#",
+        linkedin: "#",
+        email: "amarendra@northstarhomes.in",
       },
     },
   ];
@@ -172,7 +183,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {teamMembers.map((member) => (
               <TeamMember 
                 key={member.id}

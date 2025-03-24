@@ -15,7 +15,7 @@ const testimonials = [
     id: 1,
     name: "Rajesh Khanna",
     position: "Business Owner",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop",
+    initials: "RK",
     text: "Working with Northstar Homes was a game-changer for our family. They understood our needs perfectly and found us our dream home in a neighborhood we love. Their attention to detail and personalized service made the whole process smooth and stress-free.",
     rating: 5,
   },
@@ -23,7 +23,7 @@ const testimonials = [
     id: 2,
     name: "Anita Desai",
     position: "Marketing Director",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop",
+    initials: "AD",
     text: "I was impressed with the professionalism and market knowledge of the Northstar Homes team. They helped me find a perfect investment property that has already appreciated in value. I'll definitely be working with them again for my future real estate needs.",
     rating: 5,
   },
@@ -31,7 +31,7 @@ const testimonials = [
     id: 3,
     name: "Vikram Singh",
     position: "Doctor",
-    image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=1974&auto=format&fit=crop",
+    initials: "VS",
     text: "After months of searching on my own, I contacted Northstar Homes and they found me the perfect apartment within weeks. Their network and expertise in the Mumbai real estate market is unmatched. I highly recommend their services to anyone looking for property in the area.",
     rating: 4,
   },
@@ -58,13 +58,8 @@ const TestimonialSlider = () => {
           <SwiperSlide key={testimonial.id}>
             <div className="bg-white p-6 md:p-8 rounded-lg shadow-md max-w-4xl mx-auto">
               <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-                <div className="w-24 h-24 relative rounded-full overflow-hidden shrink-0">
-                  <Image
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
+                <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <span className="text-3xl font-bold text-primary">{testimonial.initials}</span>
                 </div>
                 
                 <div>

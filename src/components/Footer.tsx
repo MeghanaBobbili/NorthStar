@@ -203,9 +203,6 @@ const Footer = () => {
             <Link href="/partners" className="hover:text-primary transition-colors">
               Channel Partners
             </Link>
-            <Link href="/policies" className="hover:text-primary transition-colors">
-              Policies
-            </Link>
           </div>
         </div>
       </div>
