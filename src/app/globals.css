@@ -1,26 +1,148 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  body {
+    background-color: white;
+    color: #333333;
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair);
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  p, span, li, a {
+    font-family: var(--font-inter);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white font-medium py-2 px-6 rounded;
+  }
+
+  .btn-outline {
+    @apply border border-primary text-primary hover:bg-primary hover:text-white font-medium py-2 px-6 rounded transition duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-accent hover:bg-accent/90 text-white font-medium py-2 px-6 rounded transition duration-300;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl;
+  }
+
+  .property-card {
+    @apply card hover:scale-[1.02] cursor-pointer;
+  }
+
+  .property-badge {
+    @apply absolute top-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-bold uppercase;
+  }
+
+  .property-price {
+    @apply text-xl font-bold text-primary;
+  }
+
+  .property-address {
+    @apply text-sm text-gray-600 flex items-center gap-1;
+  }
+
+  .property-features {
+    @apply flex items-center gap-3 text-sm text-gray-700;
+  }
+
+  .feature {
+    @apply flex items-center gap-1;
+  }
+
+  /* Hero Section Styles */
+  .hero-slide {
+    @apply relative h-screen-75 bg-cover bg-center;
+  }
+
+  .hero-content {
+    @apply relative z-10 text-white max-w-xl;
+  }
+
+  .hero-overlay {
+    @apply absolute inset-0 bg-black/60;
+  }
+
+  /* Stats Section Styles */
+  .stat-card {
+    @apply bg-white p-6 rounded-lg shadow-md text-center;
+  }
+
+  .stat-value {
+    @apply text-4xl font-bold text-primary mb-2 flex items-center justify-center;
+  }
+
+  .stat-label {
+    @apply text-gray-600;
+  }
+
+  /* Project Card Styles */
+  .project-card {
+    @apply relative overflow-hidden rounded-lg shadow-lg;
+  }
+
+  .project-overlay {
+    @apply absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center;
+  }
+
+  .project-content {
+    @apply absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white;
+  }
+
+  /* Team Member Styles */
+  .team-social {
+    @apply absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+  }
+
+  /* Form Styles */
+  .form-input {
+    @apply w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  .form-button {
+    @apply w-full bg-primary hover:bg-primary-dark text-white font-medium py-2 px-4 rounded transition duration-300;
+  }
 }
+
+@layer utilities {
+  .font-playfair {
+    font-family: var(--font-playfair);
+  }
+
+  .font-sans {
+    font-family: var(--font-inter);
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+}
+
