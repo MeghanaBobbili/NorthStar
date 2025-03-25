@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaBuilding, FaRulerCombined, FaBed, FaBath, FaSwimmingPool, FaTree, FaArrowRight } from 'react-icons/fa';
+import ImageCarousel from '@/components/ImageCarousel';
 
 export default function TheLeelaPage() {
   // Project details
@@ -32,7 +33,7 @@ export default function TheLeelaPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1515263487990-61b07816b324?q=80&w=2070&auto=format&fit=crop')" }}>
+      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://northstarhomes.in/assets/images/ext-corner-front-view.jpg')" }}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
@@ -76,37 +77,23 @@ export default function TheLeelaPage() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Images */}
+            {/* Left Column - Image */}
             <div className="lg:col-span-2">
-              <div className="relative h-[400px] md:h-[500px] mb-4 rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1515263487990-61b07816b324?q=80&w=2070&auto=format&fit=crop" 
-                  alt="The Leela Apartments" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
+              <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+                <ImageCarousel 
+                  images={[
+                    { id: 1, src: "https://northstarhomes.in/assets/images/leela-banner.jpg", alt: "The Leela Banner" },
+                    { id: 2, src: "https://northstarhomes.in/assets/images/ext-corner-front-view.jpg", alt: "The Leela Corner Front View" },
+                    { id: 3, src: "https://northstarhomes.in/assets/images/night-view-2.jpg", alt: "The Leela Night View" },
+                  ]} 
                 />
-              </div>
-
-              <div className="grid grid-cols-4 gap-4">
-                {thumbnails.map((img) => (
-                  <div key={img.id} className="relative h-24 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity">
-                    <Image 
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="rounded-lg"
-                    />
-                  </div>
-                ))}
               </div>
             </div>
 
             {/* Right Column - Details */}
             <div className="bg-white p-6 rounded-lg shadow-md h-fit">
               <div className="mb-2">
-                <span className="text-sm font-medium bg-success/10 text-success px-3 py-1 rounded-full">
+                <span className="text-sm font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">
                   COMPLETED PROJECT
                 </span>
               </div>
@@ -185,111 +172,18 @@ export default function TheLeelaPage() {
         </div>
       </section>
 
-      {/* Floor Plans */}
+      {/* Master Plan */}
       <section className="py-12 bg-gray-light">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Floor Plans</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">2 BHK - 1250 sq.ft.</h3>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop" 
-                  alt="2 BHK Floor Plan" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">3 BHK - 1800 sq.ft.</h3>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=2070&auto=format&fit=crop" 
-                  alt="3 BHK Floor Plan" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">4 BHK - 2800 sq.ft.</h3>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop" 
-                  alt="4 BHK Floor Plan" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Project Gallery</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
+          <h2 className="text-3xl font-bold mb-8 text-center">Master Plan</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
               <Image 
-                src="https://images.unsplash.com/photo-1515263487990-61b07816b324?q=80&w=2070&auto=format&fit=crop" 
-                alt="Building Exterior" 
+                src="https://northstarhomes.in/assets/images/Leela%20master%20plan.jpg" 
+                alt="The Leela Master Plan" 
                 fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop" 
-                alt="Swimming Pool" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=2070&auto=format&fit=crop" 
-                alt="Gym" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop" 
-                alt="Clubhouse" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1515263487990-61b07816b324?q=80&w=2070&auto=format&fit=crop" 
-                alt="Children's Play Area" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop" 
-                alt="Landscaped Gardens" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
+                style={{ objectFit: "contain" }}
+                className="rounded-lg"
               />
             </div>
           </div>

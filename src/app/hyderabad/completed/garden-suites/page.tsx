@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaBuilding, FaRulerCombined, FaLeaf, FaSwimmingPool, FaCog, FaArrowRight } from 'react-icons/fa';
+import ImageCarousel from '@/components/ImageCarousel';
 
 export default function GardenSuitesPage() {
   // Project details
@@ -21,13 +22,6 @@ export default function GardenSuitesPage() {
     amenities: "Terrace pool, gym, meditation space, landscaped gardens",
     occupancy: "100% sold out and occupied"
   };
-
-  const thumbnails = [
-    { id: 1, src: "https://images.unsplash.com/photo-1580202596255-8644f7a461e2?q=80&w=2067&auto=format&fit=crop", alt: "Building Exterior" },
-    { id: 2, src: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=2070&auto=format&fit=crop", alt: "Living Room" },
-    { id: 3, src: "https://images.unsplash.com/photo-1555280712-c28e2035f00a?q=80&w=2070&auto=format&fit=crop", alt: "Terrace Garden" },
-    { id: 4, src: "https://images.unsplash.com/photo-1589394860680-74ba81929fa6?q=80&w=2070&auto=format&fit=crop", alt: "Pool Area" },
-  ];
 
   return (
     <>
@@ -76,30 +70,16 @@ export default function GardenSuitesPage() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Images */}
+            {/* Left Column - Image */}
             <div className="lg:col-span-2">
-              <div className="relative h-[400px] md:h-[500px] mb-4 rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1580202596255-8644f7a461e2?q=80&w=2067&auto=format&fit=crop" 
-                  alt="Garden Suites Exterior" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
+              <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+                <ImageCarousel 
+                  images={[
+                    { id: 1, src: "https://northstarhomes.in/assets/images/garden-suitsbanner.jpg", alt: "Garden Suites Banner" },
+                    { id: 2, src: "https://northstarhomes.in/assets/images/GS_G_978x418-19.jpg", alt: "Garden Suites View 1" },
+                    { id: 3, src: "https://northstarhomes.in/assets/images/GS_G_978x418-3.jpg", alt: "Garden Suites View 2" },
+                  ]} 
                 />
-              </div>
-
-              <div className="grid grid-cols-4 gap-4">
-                {thumbnails.map((img) => (
-                  <div key={img.id} className="relative h-24 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity">
-                    <Image 
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="rounded-lg"
-                    />
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -190,18 +170,42 @@ export default function GardenSuitesPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Floor Plans</h2>
           
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-2xl font-bold mb-4 text-center">3 BHK - 4000 sq.ft.</h3>
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=2070&auto=format&fit=crop" 
-                alt="3 BHK Floor Plan" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg"
-              />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="relative h-[400px] rounded-lg overflow-hidden">
+                <Image 
+                  src="https://northstarhomes.in/assets/images/gardensuites1.jpg" 
+                  alt="Garden Suites Floor Plan 1" 
+                  fill 
+                  style={{ objectFit: "contain" }}
+                  className="rounded-lg"
+                />
+              </div>
             </div>
-            <p className="text-center text-gray-700 mt-4">A floor plan that sets new standards. The floor plan of this modern terraced house offers a generous, well thought-out layout and allows you to design rooms in line with your individual needs.</p>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="relative h-[400px] rounded-lg overflow-hidden">
+                <Image 
+                  src="https://northstarhomes.in/assets/images/gardensuites2.jpg" 
+                  alt="Garden Suites Floor Plan 2" 
+                  fill 
+                  style={{ objectFit: "contain" }}
+                  className="rounded-lg"
+                />
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="relative h-[400px] rounded-lg overflow-hidden">
+                <Image 
+                  src="https://northstarhomes.in/assets/images/gardensuites3.jpg" 
+                  alt="Garden Suites Floor Plan 3" 
+                  fill 
+                  style={{ objectFit: "contain" }}
+                  className="rounded-lg"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -214,129 +218,17 @@ export default function GardenSuitesPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-4 text-center">Terrace Garden</h3>
-              <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
-                <Image 
-                  src="https://images.unsplash.com/photo-1555280712-c28e2035f00a?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Terrace Garden" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
               <p className="text-gray-700 text-center">Luxurious terrace garden with swimming pool, gazebo and barbeque area for entertaining guests.</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-4 text-center">Modular Kitchen</h3>
-              <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
-                <Image 
-                  src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Modular Kitchen" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
               <p className="text-gray-700 text-center">Contemporary modular kitchen with island style, premium fixtures and high-end appliances.</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-4 text-center">Wellness Space</h3>
-              <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
-                <Image 
-                  src="https://images.unsplash.com/photo-1589394860680-74ba81929fa6?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Gym & Meditation Space" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
               <p className="text-gray-700 text-center">Air-conditioned gym and meditation space for physical and mental wellbeing.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Project Gallery</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1580202596255-8644f7a461e2?q=80&w=2067&auto=format&fit=crop" 
-                alt="Building Exterior" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=2070&auto=format&fit=crop" 
-                alt="Living Room" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1555280712-c28e2035f00a?q=80&w=2070&auto=format&fit=crop" 
-                alt="Terrace Garden" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1589394860680-74ba81929fa6?q=80&w=2070&auto=format&fit=crop" 
-                alt="Swimming Pool" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1580202596255-8644f7a461e2?q=80&w=2067&auto=format&fit=crop" 
-                alt="Hanging Gardens" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1555280712-c28e2035f00a?q=80&w=2070&auto=format&fit=crop" 
-                alt="Landscaped Entry" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Location Map */}
-      <section className="py-12 bg-gray-light">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Location Map</h2>
-          <div className="bg-white p-4 rounded-lg shadow-md">
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1580202596255-8644f7a461e2?q=80&w=2067&auto=format&fit=crop" 
-                alt="Location Map" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg"
-              />
-            </div>
-            <div className="mt-4 text-center">
-              <p className="text-lg font-medium">Garden Suites, Road 12, Banjara Hills, Hyderabad</p>
-              <p className="text-gray-600">Prime location in the heart of Hyderabad's most prestigious neighborhood</p>
             </div>
           </div>
         </div>

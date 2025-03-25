@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaBuilding, FaRulerCombined, FaWater, FaTree, FaCar, FaArrowRight } from 'react-icons/fa';
+import ImageCarousel from '@/components/ImageCarousel';
 
 export default function VedaPage() {
   // Project details
@@ -32,7 +33,7 @@ export default function VedaPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1486304873000-235643847519?q=80&w=2072&auto=format&fit=crop')" }}>
+      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://northstarhomes.in/assets/images/HS_G_978x418-3.jpg')" }}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
@@ -76,30 +77,16 @@ export default function VedaPage() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Images */}
+            {/* Left Column - Image */}
             <div className="lg:col-span-2">
-              <div className="relative h-[400px] md:h-[500px] mb-4 rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1486304873000-235643847519?q=80&w=2072&auto=format&fit=crop" 
-                  alt="Veda Signature Apartments" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
+              <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+                <ImageCarousel 
+                  images={[
+                    { id: 1, src: "https://northstarhomes.in/assets/images/vedabanner.jpg", alt: "Veda Banner" },
+                    { id: 2, src: "https://northstarhomes.in/assets/images/VEDA_G_978x418-3.jpg", alt: "Veda View 1" },
+                    { id: 3, src: "https://northstarhomes.in/assets/images/HS_G_978x418-3.jpg", alt: "Veda View 2" },
+                  ]} 
                 />
-              </div>
-
-              <div className="grid grid-cols-4 gap-4">
-                {thumbnails.map((img) => (
-                  <div key={img.id} className="relative h-24 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity">
-                    <Image 
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="rounded-lg"
-                    />
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -185,38 +172,20 @@ export default function VedaPage() {
         </div>
       </section>
 
-      {/* Floor Plans */}
+      {/* Master Plan */}
       <section className="py-12 bg-gray-light">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Floor Plans</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">Master Plan</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">2 BHK - 1250 sq.ft.</h3>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=2070&auto=format&fit=crop" 
-                  alt="2 BHK Floor Plan" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-              <p className="text-center text-gray-700 mt-4">Efficient floor plan with spacious living areas, two bedrooms, and a large balcony overlooking the Zen garden.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">3 BHK - 2100 sq.ft.</h3>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1598928636135-d146006ff4be?q=80&w=2070&auto=format&fit=crop" 
-                  alt="3 BHK Floor Plan" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-              <p className="text-center text-gray-700 mt-4">Luxury floor plan with three spacious bedrooms, a formal living room, family lounge, and multiple balconies.</p>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+              <Image 
+                src="https://northstarhomes.in/assets/images/masterplanveda.jpg" 
+                alt="Veda Master Plan" 
+                fill 
+                style={{ objectFit: "contain" }}
+                className="rounded-lg"
+              />
             </div>
           </div>
         </div>
@@ -230,129 +199,17 @@ export default function VedaPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-4 text-center">Zen Garden</h3>
-              <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
-                <Image 
-                  src="https://images.unsplash.com/photo-1555529771-122e5d9f2341?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Zen Garden" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
               <p className="text-gray-700 text-center">Japanese-inspired garden with a reflecting pool, carefully arranged stones, and manicured plants creating a peaceful ambiance.</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-4 text-center">Rooftop Garden</h3>
-              <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
-                <Image 
-                  src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=2074&auto=format&fit=crop" 
-                  alt="Rooftop Garden" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
               <p className="text-gray-700 text-center">Landscaped rooftop garden with seating areas, meditation spaces, and panoramic views of the city skyline.</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-4 text-center">Fitness Center</h3>
-              <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
-                <Image 
-                  src="/images/property-1.jpg" 
-                  alt="Fitness Center" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
               <p className="text-gray-700 text-center">Well-equipped fitness center with cardio machines, weight training equipment, and a yoga studio.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Project Gallery</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="/images/property-2.jpg" 
-                alt="Building Exterior" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="/images/property-1.jpg" 
-                alt="Living Room" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="/images/property-3.jpg" 
-                alt="Zen Garden" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="/images/about-img.jpg" 
-                alt="Rooftop Garden" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="/images/property-2.jpg" 
-                alt="Entrance Lobby" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="/images/property-1.jpg" 
-                alt="Fitness Center" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Location Map */}
-      <section className="py-12 bg-gray-light">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Location Map</h2>
-          <div className="bg-white p-4 rounded-lg shadow-md">
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image 
-                src="/images/property-2.jpg" 
-                alt="Location Map" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg"
-              />
-            </div>
-            <div className="mt-4 text-center">
-              <p className="text-lg font-medium">Veda, Himayatnagar, Hyderabad</p>
-              <p className="text-gray-600">Centrally located with excellent connectivity to all parts of the city</p>
             </div>
           </div>
         </div>

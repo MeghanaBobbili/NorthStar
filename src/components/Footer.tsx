@@ -101,11 +101,6 @@ const Footer = () => {
                       Airport Boulevard
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/hyderabad/completed/northstar-towers" className="text-gray-300 hover:text-primary transition-colors text-sm">
-                      Northstar Towers
-                    </Link>
-                  </li>
                 </ul>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaHome, FaRulerCombined, FaPlane, FaRoad, FaLeaf, FaArrowRight } from 'react-icons/fa';
+import ImageCarousel from '@/components/ImageCarousel';
 
 export default function AirportBoulevardPage() {
   // Project details
@@ -22,17 +23,10 @@ export default function AirportBoulevardPage() {
     occupancy: "95% sold out and occupied"
   };
 
-  const thumbnails = [
-    { id: 1, src: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop", alt: "Villa Exterior" },
-    { id: 2, src: "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?q=80&w=2074&auto=format&fit=crop", alt: "Living Room" },
-    { id: 3, src: "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=2070&auto=format&fit=crop", alt: "Smart Features" },
-    { id: 4, src: "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?q=80&w=2070&auto=format&fit=crop", alt: "Community Area" },
-  ];
-
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop')" }}>
+      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://northstarhomes.in/assets/images/AB_978x418-20.png')" }}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
@@ -76,30 +70,16 @@ export default function AirportBoulevardPage() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Images */}
+            {/* Left Column - Image */}
             <div className="lg:col-span-2">
-              <div className="relative h-[400px] md:h-[500px] mb-4 rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Airport Boulevard Smart Villas" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
+              <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+                <ImageCarousel 
+                  images={[
+                    { id: 1, src: "https://northstarhomes.in/assets/images/airportbanner.jpg", alt: "Airport Boulevard Banner" },
+                    { id: 2, src: "https://northstarhomes.in/assets/images/AB_978x418-20.png", alt: "Airport Boulevard View 1" },
+                    { id: 3, src: "https://northstarhomes.in/assets/images/AB_978x418-22.png", alt: "Airport Boulevard View 2" },
+                  ]} 
                 />
-              </div>
-
-              <div className="grid grid-cols-4 gap-4">
-                {thumbnails.map((img) => (
-                  <div key={img.id} className="relative h-24 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity">
-                    <Image 
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="rounded-lg"
-                    />
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -185,121 +165,19 @@ export default function AirportBoulevardPage() {
         </div>
       </section>
 
-      {/* Villa Plans */}
+      {/* Master Plan */}
       <section className="py-12 bg-gray-light">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Villa Plans</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">3 BHK - 2200 sq.ft.</h3>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?q=80&w=2074&auto=format&fit=crop" 
-                  alt="3 BHK Villa Plan" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">4 BHK - 3800 sq.ft.</h3>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?q=80&w=2070&auto=format&fit=crop" 
-                  alt="4 BHK Villa Plan" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Project Gallery</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
+          <h2 className="text-3xl font-bold mb-8 text-center">Master Plan</h2>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
               <Image 
-                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop" 
-                alt="Villa Exterior" 
+                src="https://northstarhomes.in/assets/images/masterplan-b.jpg" 
+                alt="Airport Boulevard Master Plan" 
                 fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?q=80&w=2074&auto=format&fit=crop" 
-                alt="Villa Interior" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=2070&auto=format&fit=crop" 
-                alt="Smart Features" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?q=80&w=2070&auto=format&fit=crop" 
-                alt="Community Area" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop" 
-                alt="Swimming Pool" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=2070&auto=format&fit=crop" 
-                alt="Clubhouse" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Location Map */}
-      <section className="py-12 bg-gray-light">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Location Map</h2>
-          <div className="bg-white p-4 rounded-lg shadow-md">
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop" 
-                alt="Location Map" 
-                fill 
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "contain" }}
                 className="rounded-lg"
               />
-            </div>
-            <div className="mt-4 text-center">
-              <p className="text-lg font-medium">Airport Boulevard, Tukkuguda, Hyderabad</p>
-              <p className="text-gray-600">Near Shamshabad Airport, 15 min from Airport, 40 min from Financial District</p>
             </div>
           </div>
         </div>

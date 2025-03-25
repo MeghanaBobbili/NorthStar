@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaHome, FaRulerCombined, FaTree, FaWater, FaShieldAlt, FaArrowRight } from 'react-icons/fa';
+import ImageCarousel from '@/components/ImageCarousel';
 
 export default function EdenGardenPage() {
   // Project details
@@ -14,7 +15,7 @@ export default function EdenGardenPage() {
   ];
 
   const projectOverview = {
-    location: "Kompally, Hyderabad",
+    location: "Kokapet, Hyderabad",
     completionYear: "2019",
     totalUnits: "120 luxury villas",
     configurations: "3 & 4 BHK villas",
@@ -41,7 +42,7 @@ export default function EdenGardenPage() {
             </h1>
             <div className="flex items-center mb-6">
               <FaMapMarkerAlt className="text-primary mr-2" />
-              <span className="text-white text-lg">Kompally, Hyderabad</span>
+              <span className="text-white text-lg">Kokapet, Hyderabad</span>
             </div>
             <nav className="flex" aria-label="Breadcrumb">
               <ol className="inline-flex items-center space-x-1 md:space-x-3 text-white">
@@ -76,30 +77,16 @@ export default function EdenGardenPage() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Images */}
+            {/* Left Column - Image */}
             <div className="lg:col-span-2">
-              <div className="relative h-[400px] md:h-[500px] mb-4 rounded-lg overflow-hidden">
-                <Image 
-                  src="/images/about-img.jpg" 
-                  alt="Eden Garden Villas" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
+              <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+                <ImageCarousel 
+                  images={[
+                    { id: 1, src: "https://northstarhomes.in/assets/images/eden-garden.jpg", alt: "Eden Garden Banner" },
+                    { id: 2, src: "https://northstarhomes.in/assets/images/EGK_7_978x418.jpg", alt: "Eden Garden View 1" },
+                    { id: 3, src: "https://northstarhomes.in/assets/images/EGK_West%20Rear_978x418.jpg", alt: "Eden Garden West Rear View" },
+                  ]} 
                 />
-              </div>
-
-              <div className="grid grid-cols-4 gap-4">
-                {thumbnails.map((img) => (
-                  <div key={img.id} className="relative h-24 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity">
-                    <Image 
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="rounded-lg"
-                    />
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -173,133 +160,31 @@ export default function EdenGardenPage() {
           <div className="lg:max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">About Eden Garden</h2>
             <div className="prose prose-lg max-w-none">
-              <p>Eden Garden is a premium gated villa community located in the serene neighborhood of Kompally, Hyderabad. Completed in 2019, this elegant project spans across 25 acres and offers 120 luxury villas designed to provide a perfect blend of comfort, sophistication, and natural beauty.</p>
+              <p>Eden Garden is a premium gated villa community located in the serene neighborhood of Kokapet, Hyderabad. Completed in 2019, this elegant project spans across 25 acres and offers 120 luxury villas designed to provide a perfect blend of comfort, sophistication, and natural beauty.</p>
               
               <p>The villas at Eden Garden are thoughtfully designed with spacious layouts, excellent cross-ventilation, and abundant natural light. The project offers 3 and 4 BHK configurations ranging from 2500 to 4000 square feet, catering to discerning homeowners looking for luxury and privacy.</p>
               
               <p>Eden Garden boasts world-class amenities including a fully-equipped clubhouse, temperature-controlled swimming pool, state-of-the-art gymnasium, tennis court, jogging track, children's play area, and expansive landscaped gardens with a central lake. The gated community provides 24/7 security with CCTV surveillance, ensuring peace of mind for all residents.</p>
               
-              <p>Located in Kompally, one of Hyderabad's fastest-growing residential areas, Eden Garden offers excellent connectivity to major business districts, educational institutions, healthcare facilities, shopping centers, and entertainment venues. Experience elevated living at Eden Garden by Northstar Homes.</p>
+              <p>Located in Kokapet, one of Hyderabad's fastest-growing residential areas, Eden Garden offers excellent connectivity to major business districts, educational institutions, healthcare facilities, shopping centers, and entertainment venues. Experience elevated living at Eden Garden by Northstar Homes.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Villa Plans */}
+      {/* Master Plan */}
       <section className="py-12 bg-gray-light">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Villa Plans</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">3 BHK - 2500 sq.ft.</h3>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
-                <Image 
-                  src="/images/property-1.jpg" 
-                  alt="3 BHK Villa Plan" 
-                  fill 
-                  style={{ objectFit: "contain" }}
-                  className="rounded-lg"
-                />
-              </div>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">4 BHK - 4000 sq.ft.</h3>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
-                <Image 
-                  src="/images/property-2.jpg" 
-                  alt="4 BHK Villa Plan" 
-                  fill 
-                  style={{ objectFit: "contain" }}
-                  className="rounded-lg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Project Gallery</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
+          <h2 className="text-3xl font-bold mb-8 text-center">Master Plan</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
               <Image 
-                src="/images/about-img.jpg" 
-                alt="Villa Exterior" 
+                src="https://northstarhomes.in/assets/images/masterplaneden.jpg" 
+                alt="Eden Garden Master Plan" 
                 fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="/images/property-1.jpg" 
-                alt="Villa Interior" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="/images/property-2.jpg" 
-                alt="Garden Area" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="/images/property-3.jpg" 
-                alt="Swimming Pool" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="/images/about-img.jpg" 
-                alt="Clubhouse" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="/images/property-1.jpg" 
-                alt="Central Lake" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Location Map */}
-      <section className="py-12 bg-gray-light">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Location Map</h2>
-          <div className="bg-white p-4 rounded-lg shadow-md">
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image 
-                src="/images/property-3.jpg" 
-                alt="Location Map" 
-                fill 
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "contain" }}
                 className="rounded-lg"
               />
-            </div>
-            <div className="mt-4 text-center">
-              <p className="text-lg font-medium">Eden Garden, Kompally, Hyderabad</p>
-              <p className="text-gray-600">Near Kompally Junction, 15 min drive from Secunderabad</p>
             </div>
           </div>
         </div>

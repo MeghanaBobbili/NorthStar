@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaBuilding, FaRulerCombined, FaBed, FaRegBuilding, FaShieldAlt, FaWifi, FaCarAlt, FaArrowRight } from 'react-icons/fa';
+import ImageCarousel from '@/components/ImageCarousel';
 
 export default function SPPalacioPage() {
   // Project details
@@ -26,16 +27,17 @@ export default function SPPalacioPage() {
   };
 
   const thumbnails = [
-    { id: 1, src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop", alt: "SP Palacio Exterior" },
-    { id: 2, src: "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2074&auto=format&fit=crop", alt: "Luxury Living Room" },
-    { id: 3, src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop", alt: "Master Bedroom" },
-    { id: 4, src: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop", alt: "Building View" },
+    { id: 1, src: "https://northstarhomes.in/assets/images/sp_palacio-banner1.jpg", alt: "SP Palacio" },
+    { id: 2, src: "https://northstarhomes.in/assets/images/sp_palacio-banner2.jpg", alt: "SP Palacio" },
+    { id: 3, src: "https://northstarhomes.in/assets/images/sp_palacio-banner3.jpg", alt: "SP Palacio" },
+    { id: 4, src: "https://northstarhomes.in/assets/images/sp_palacio-banner4.jpg", alt: "SP Palacio" },
+    { id: 5, src: "https://northstarhomes.in/assets/images/sp_palacio-banner5.jpg", alt: "SP Palacio" },
   ];
 
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop')" }}>
+      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://northstarhomes.in/assets/images/sp_palacio-banner1.jpg')" }}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
@@ -81,29 +83,7 @@ export default function SPPalacioPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Images */}
             <div className="lg:col-span-2">
-              <div className="relative h-[400px] md:h-[500px] mb-4 rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" 
-                  alt="SP Palacio" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-
-              <div className="grid grid-cols-4 gap-4">
-                {thumbnails.map((img) => (
-                  <div key={img.id} className="relative h-24 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity">
-                    <Image 
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="rounded-lg"
-                    />
-                  </div>
-                ))}
-              </div>
+              <ImageCarousel images={thumbnails} />
             </div>
 
             {/* Right Column - Details */}
@@ -199,15 +179,15 @@ export default function SPPalacioPage() {
       {/* Floor Plans */}
       <section className="py-12 bg-gray-light">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Floor Plans</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">Master Plan</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">3 BHK Premium - 1800 sq.ft.</h3>
+              <h3 className="text-2xl font-bold mb-4 text-center">Ground Floor</h3>
               <div className="relative h-[300px] rounded-lg overflow-hidden">
                 <Image 
                   src="https://northstarhomes.in/assets/images/sp_palacio-groundfloor.jpg" 
-                  alt="3 BHK Floor Plan" 
+                  alt="Ground Floor Plan" 
                   fill 
                   style={{ objectFit: "contain" }}
                   className="rounded-lg"
@@ -216,11 +196,37 @@ export default function SPPalacioPage() {
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">4 BHK Luxury - 2500 sq.ft.</h3>
+              <h3 className="text-2xl font-bold mb-4 text-center">Level 1</h3>
               <div className="relative h-[300px] rounded-lg overflow-hidden">
                 <Image 
-                  src="https://northstarhomes.in/assets/images/sp_palacio-groundfloor.jpg" 
-                  alt="4 BHK Floor Plan" 
+                  src="https://northstarhomes.in/assets/images/SP-palacio-Level-1.jpg" 
+                  alt="Level 1 Floor Plan" 
+                  fill 
+                  style={{ objectFit: "contain" }}
+                  className="rounded-lg"
+                />
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-2xl font-bold mb-4 text-center">Typical Floor Plan (3 to 16 floors)</h3>
+              <div className="relative h-[300px] rounded-lg overflow-hidden">
+                <Image 
+                  src="https://northstarhomes.in/assets/images/sp_palacio-Typical-floor-plan.jpg" 
+                  alt="Typical Floor Plan" 
+                  fill 
+                  style={{ objectFit: "contain" }}
+                  className="rounded-lg"
+                />
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-2xl font-bold mb-4 text-center">Terrace Floor Plan</h3>
+              <div className="relative h-[300px] rounded-lg overflow-hidden">
+                <Image 
+                  src="https://northstarhomes.in/assets/images/sp_palacio-terrace-floor-plan.jpg" 
+                  alt="Terrace Floor Plan" 
                   fill 
                   style={{ objectFit: "contain" }}
                   className="rounded-lg"
@@ -266,22 +272,6 @@ export default function SPPalacioPage() {
                 Call: +91 8657553355
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Master Plan */}
-      <section className="py-12 bg-gray-light">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Master Plan</h2>
-          <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
-            <Image 
-              src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop" 
-              alt="SP Palacio Master Plan" 
-              fill 
-              style={{ objectFit: "contain" }}
-              className="rounded-lg"
-            />
           </div>
         </div>
       </section>

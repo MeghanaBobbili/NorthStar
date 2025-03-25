@@ -77,30 +77,16 @@ export default function AirportBoulevardCommercialPage() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Images */}
+            {/* Left Column - Image */}
             <div className="lg:col-span-2">
-              <div className="relative h-[400px] md:h-[500px] mb-4 rounded-lg overflow-hidden">
+              <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <Image 
-                  src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop" 
+                  src="https://northstarhomes.in/assets/images/airport-banner.jpg" 
                   alt="Airport Boulevard Commercial" 
                   fill 
                   style={{ objectFit: "cover" }}
                   className="rounded-lg"
                 />
-              </div>
-
-              <div className="grid grid-cols-4 gap-4">
-                {thumbnails.map((img) => (
-                  <div key={img.id} className="relative h-24 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity">
-                    <Image 
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="rounded-lg"
-                    />
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -185,41 +171,6 @@ export default function AirportBoulevardCommercialPage() {
               <p>Airport Boulevard Commercial boasts excellent infrastructure with wide internal roads, ample parking space, 24/7 power backup, water supply, and security. The project also includes landscaped gardens and common areas for visitors and employees to relax.</p>
               
               <p>Located on the busy Srisailam Highway and in close proximity to the airport, this commercial project enjoys excellent connectivity to all parts of Hyderabad. Invest in Airport Boulevard Commercial by Northstar Homes for a promising business opportunity in one of the fastest-growing areas of Hyderabad.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Floor Plans */}
-      <section className="py-12 bg-gray-light">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Floor Plans</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">Retail Spaces - Ground Floor</h3>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?q=80&w=2072&auto=format&fit=crop" 
-                  alt="Retail Spaces Floor Plan" 
-                  fill 
-                  style={{ objectFit: "contain" }}
-                  className="rounded-lg"
-                />
-              </div>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">Office Spaces - Upper Floors</h3>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Office Spaces Floor Plan" 
-                  fill 
-                  style={{ objectFit: "contain" }}
-                  className="rounded-lg"
-                />
-              </div>
             </div>
           </div>
         </div>

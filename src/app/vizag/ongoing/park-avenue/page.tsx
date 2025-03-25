@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaBuilding, FaRulerCombined, FaSwimmingPool, FaTree, FaShieldAlt, FaArrowRight } from 'react-icons/fa';
+import ImageCarousel from '@/components/ImageCarousel';
 
 export default function ParkAvenuePage() {
   // Project details
@@ -33,7 +34,7 @@ export default function ParkAvenuePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop')" }}>
+      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://northstarhomes.in/assets/images/parkave-banner2.jpg')" }}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
@@ -77,30 +78,18 @@ export default function ParkAvenuePage() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Images */}
+            {/* Left Column - Image */}
             <div className="lg:col-span-2">
-              <div className="relative h-[400px] md:h-[500px] mb-4 rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Park Avenue Apartment Complex" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
+              <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+                <ImageCarousel 
+                  images={[
+                    { id: 1, src: "https://northstarhomes.in/assets/images/park-sep.jpeg", alt: "Park Avenue View 1" },
+                    { id: 2, src: "https://northstarhomes.in/assets/images/parkave-banner2.jpg", alt: "Park Avenue View 2" },
+                    { id: 3, src: "https://northstarhomes.in/assets/images/parkave-banner1.jpg", alt: "Park Avenue View 3" },
+                    { id: 4, src: "https://northstarhomes.in/assets/images/parkave-banner3.jpg", alt: "Park Avenue View 4" },
+                    { id: 5, src: "https://northstarhomes.in/assets/images/parkave-banner4.jpg", alt: "Park Avenue View 5" },
+                  ]} 
                 />
-              </div>
-
-              <div className="grid grid-cols-4 gap-4">
-                {thumbnails.map((img) => (
-                  <div key={img.id} className="relative h-24 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity">
-                    <Image 
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="rounded-lg"
-                    />
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -195,47 +184,31 @@ export default function ParkAvenuePage() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Floor Plans</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="space-y-8">
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">2 BHK - 1100 sq.ft.</h3>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
+              <h3 className="text-2xl font-bold mb-4 text-center">Master Plan</h3>
+              <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <Image 
-                  src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2074&auto=format&fit=crop" 
-                  alt="2 BHK Floor Plan" 
+                  src="https://northstarhomes.in/assets/images/parkave-masterplan.jpg" 
+                  alt="Master Plan" 
                   fill 
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "contain" }}
                   className="rounded-lg"
                 />
               </div>
-              <p className="text-center text-gray-700 mt-4">Spacious 2-bedroom apartment with modern layout, private balcony, and sea view options.</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">2.5 BHK - 1400 sq.ft.</h3>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
+              <h3 className="text-2xl font-bold mb-4 text-center">Typical Floor Plan</h3>
+              <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <Image 
-                  src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=2070&auto=format&fit=crop" 
-                  alt="2.5 BHK Floor Plan" 
+                  src="https://northstarhomes.in/assets/images/parkave-typicalplan.jpg" 
+                  alt="Typical Floor Plan" 
                   fill 
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "contain" }}
                   className="rounded-lg"
                 />
               </div>
-              <p className="text-center text-gray-700 mt-4">Elegant 2.5-bedroom apartment with study room, spacious balcony, and premium finishes.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">3 BHK - 1850 sq.ft.</h3>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=2070&auto=format&fit=crop" 
-                  alt="3 BHK Floor Plan" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-              <p className="text-center text-gray-700 mt-4">Luxurious 3-bedroom apartment with spacious living areas, master suite, and panoramic sea views.</p>
             </div>
           </div>
         </div>
@@ -251,7 +224,7 @@ export default function ParkAvenuePage() {
               <h3 className="text-xl font-bold mb-4 text-center">Rooftop Infinity Pool</h3>
               <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
                 <Image 
-                  src="https://images.unsplash.com/photo-1536743939714-23ec5ac2dbae?q=80&w=2076&auto=format&fit=crop" 
+                  src="https://northstarhomes.in/assets/images/gallery-img-10.jpg" 
                   alt="Infinity Pool" 
                   fill 
                   style={{ objectFit: "cover" }}
@@ -265,7 +238,7 @@ export default function ParkAvenuePage() {
               <h3 className="text-xl font-bold mb-4 text-center">Modern Clubhouse</h3>
               <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
                 <Image 
-                  src="https://images.unsplash.com/photo-1571984405176-5958b5f49f31?q=80&w=2070&auto=format&fit=crop" 
+                  src="https://northstarhomes.in/assets/images/parkave-clubhouse.jpg" 
                   alt="Clubhouse" 
                   fill 
                   style={{ objectFit: "cover" }}
@@ -279,7 +252,7 @@ export default function ParkAvenuePage() {
               <h3 className="text-xl font-bold mb-4 text-center">Fitness Center</h3>
               <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
                 <Image 
-                  src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop" 
+                  src="https://northstarhomes.in/assets/images/parkave-amenities.jpg" 
                   alt="Fitness Center" 
                   fill 
                   style={{ objectFit: "cover" }}
@@ -287,91 +260,6 @@ export default function ParkAvenuePage() {
                 />
               </div>
               <p className="text-gray-700 text-center">State-of-the-art fitness center equipped with modern exercise machines, cardio equipment, and yoga space.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Project Gallery</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop" 
-                alt="Building Exterior" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2074&auto=format&fit=crop" 
-                alt="Living Room" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1536743939714-23ec5ac2dbae?q=80&w=2076&auto=format&fit=crop" 
-                alt="Infinity Pool" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1571984405176-5958b5f49f31?q=80&w=2070&auto=format&fit=crop" 
-                alt="Landscaped Garden" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop" 
-                alt="Children's Play Area" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2074&auto=format&fit=crop" 
-                alt="Master Bedroom" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Location Map */}
-      <section className="py-12 bg-gray-light">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Location Map</h2>
-          <div className="bg-white p-4 rounded-lg shadow-md">
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop" 
-                alt="Location Map" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg"
-              />
-            </div>
-            <div className="mt-4 text-center">
-              <p className="text-lg font-medium">Park Avenue, Madhurawada, Visakhapatnam</p>
-              <p className="text-gray-600">Close to IT hub and 15 minutes from the city center</p>
             </div>
           </div>
         </div>

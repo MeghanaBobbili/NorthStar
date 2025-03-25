@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaBuilding, FaRulerCombined, FaSwimmingPool, FaTree, FaShieldAlt, FaArrowRight } from 'react-icons/fa';
+import ImageCarousel from '@/components/ImageCarousel';
 
 export default function EdenGardenPage() {
   // Project details
@@ -33,7 +34,7 @@ export default function EdenGardenPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=2070&auto=format&fit=crop')" }}>
+      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://northstarhomes.in/assets/images/edengarden-vizagbanner.png')" }}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
@@ -77,30 +78,16 @@ export default function EdenGardenPage() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Images */}
+            {/* Left Column - Image */}
             <div className="lg:col-span-2">
-              <div className="relative h-[400px] md:h-[500px] mb-4 rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Eden Garden Apartment Complex" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
+              <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+                <ImageCarousel 
+                  images={[
+                    { id: 1, src: "https://northstarhomes.in/assets/images/edengarden-vizagbanner.png", alt: "Eden Garden Banner" },
+                    { id: 2, src: "https://northstarhomes.in/assets/images/DJI_0392.jpg", alt: "Eden Garden View 1" },
+                    { id: 3, src: "https://northstarhomes.in/assets/images/DJI_0410.jpg", alt: "Eden Garden View 2" },
+                  ]} 
                 />
-              </div>
-
-              <div className="grid grid-cols-4 gap-4">
-                {thumbnails.map((img) => (
-                  <div key={img.id} className="relative h-24 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity">
-                    <Image 
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="rounded-lg"
-                    />
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -192,135 +179,19 @@ export default function EdenGardenPage() {
         </div>
       </section>
 
-      {/* Floor Plans */}
+      {/* Master Plan */}
       <section className="py-12 bg-gray-light">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Floor Plans</h2>
-          <p className="text-center text-gray-700 mb-8">The detailed floor plans of EDEN GARDEN showcase 3 BHK luxury flats in Vizag with lavish balconies. Being close to the beach, these spacious balconies are features you'll cherish.</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">East Tower - 1788-2005 sq.ft.</h3>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1582037928046-2723d6fcad38?q=80&w=2070&auto=format&fit=crop" 
-                  alt="East Tower Floor Plan" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-              <p className="text-center text-gray-700 mt-4">Spacious 3-bedroom layout with iconic T-shape design allowing maximum natural light and ventilation.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">North Tower - 3325-3584 sq.ft.</h3>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?q=80&w=2070&auto=format&fit=crop" 
-                  alt="North Tower Floor Plan" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-              <p className="text-center text-gray-700 mt-4">Luxurious 3-bedroom apartment with expansive living areas, lavish balconies, and premium finishes.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Amenities Section */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Premium Amenities</h2>
-          <p className="text-center text-gray-700 mb-8">The premium amenities at EDEN GARDEN make it stand out from other residential apartments in Vizag.</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4 text-center">Children's Play Area</h3>
-              <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
-                <Image 
-                  src="https://images.unsplash.com/photo-1575517111839-3a3843ee7f5d?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Children's Play Area" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-              <p className="text-gray-700 text-center">Safe and engaging play areas designed for children of all ages.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4 text-center">Swimming Pool</h3>
-              <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
-                <Image 
-                  src="https://images.unsplash.com/photo-1540539234-c14a20fb7c7b?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Swimming Pool" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-              <p className="text-gray-700 text-center">Elegant swimming pool with relaxation deck, perfect for leisure and recreation.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4 text-center">Basketball Court</h3>
-              <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
-                <Image 
-                  src="https://images.unsplash.com/photo-1540539234-c14a20fb7c7b?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Basketball Court" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-              <p className="text-gray-700 text-center">Professional-grade basketball court for sports enthusiasts.</p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4 text-center">Gym</h3>
-              <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
-                <Image 
-                  src="https://images.unsplash.com/photo-1582037928046-2723d6fcad38?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Gym" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-              <p className="text-gray-700 text-center">State-of-the-art fitness center with modern equipment.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4 text-center">Theatre</h3>
-              <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
-                <Image 
-                  src="https://images.unsplash.com/photo-1575517111839-3a3843ee7f5d?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Theatre" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-              <p className="text-gray-700 text-center">Private theatre for an immersive entertainment experience.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4 text-center">Yoga and Meditation Room</h3>
-              <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
-                <Image 
-                  src="https://images.unsplash.com/photo-1575517111839-3a3843ee7f5d?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Yoga Room" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-              <p className="text-gray-700 text-center">Tranquil space dedicated to yoga and meditation practices.</p>
+          <h2 className="text-3xl font-bold mb-8 text-center">Master Plan</h2>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+              <Image 
+                src="https://northstarhomes.in/assets/images/Master-Planedenvizag.jpg" 
+                alt="Eden Garden Master Plan" 
+                fill 
+                style={{ objectFit: "contain" }}
+                className="rounded-lg"
+              />
             </div>
           </div>
         </div>
@@ -357,91 +228,6 @@ export default function EdenGardenPage() {
               
               <h3 className="text-xl font-bold mb-4 mt-6">Toilets</h3>
               <p className="text-gray-700">Washbasin with counter, Wall Mount European water closet with flush tank of Jaguar / Hindware or equivalent, Hot and cold wall mixer with shower. All fixtures are C.P. coated from Jaguar / Hindware or equivalent</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Project Gallery</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=2070&auto=format&fit=crop" 
-                alt="Building Exterior" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1582037928046-2723d6fcad38?q=80&w=2070&auto=format&fit=crop" 
-                alt="Living Room" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1540539234-c14a20fb7c7b?q=80&w=2070&auto=format&fit=crop" 
-                alt="Swimming Pool" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1575517111839-3a3843ee7f5d?q=80&w=2070&auto=format&fit=crop" 
-                alt="Landscaped Garden" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=2070&auto=format&fit=crop" 
-                alt="Clubhouse Interior" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1582037928046-2723d6fcad38?q=80&w=2070&auto=format&fit=crop" 
-                alt="Master Bedroom" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Location Map */}
-      <section className="py-12 bg-gray-light">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Location Map</h2>
-          <div className="bg-white p-4 rounded-lg shadow-md">
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=2070&auto=format&fit=crop" 
-                alt="Location Map" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg"
-              />
-            </div>
-            <div className="mt-4 text-center">
-              <p className="text-lg font-medium">Eden Garden, Vizag, Andhra Pradesh</p>
-              <p className="text-gray-600">Nestled between Kailasagiri and Simhachalam Hills, just 2.5 KM from Tenneti Park Beach</p>
             </div>
           </div>
         </div>

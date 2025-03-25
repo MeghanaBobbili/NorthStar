@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaTree, FaRulerCombined, FaHome, FaRoad, FaWater, FaLeaf, FaArrowRight } from 'react-icons/fa';
+import ImageCarousel from '@/components/ImageCarousel';
 
 export default function SanctuaryPage() {
   // Project details
@@ -24,16 +25,14 @@ export default function SanctuaryPage() {
   };
 
   const thumbnails = [
-    { id: 1, src: "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?q=80&w=2025&auto=format&fit=crop", alt: "Plot Overview" },
-    { id: 2, src: "https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?q=80&w=2070&auto=format&fit=crop", alt: "Internal Roads" },
-    { id: 3, src: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=2070&auto=format&fit=crop", alt: "Infrastructure" },
-    { id: 4, src: "https://images.unsplash.com/photo-1620332372374-f108c53d2e03?q=80&w=2072&auto=format&fit=crop", alt: "Community Area" },
+    { id: 1, src: "https://northstarhomes.in/assets/images/sac-new-desktop-1.jpg", alt: "Sanctuary Villa Plots" },
+    { id: 2, src: "https://northstarhomes.in/assets/images/sac-new-desktop-2.jpg", alt: "Sanctuary Villa Plots" },
   ];
 
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?q=80&w=2025&auto=format&fit=crop')" }}>
+      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://northstarhomes.in/assets/images/sac-new-desktop-1.jpg')" }}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
@@ -79,29 +78,7 @@ export default function SanctuaryPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Images */}
             <div className="lg:col-span-2">
-              <div className="relative h-[400px] md:h-[500px] mb-4 rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?q=80&w=2025&auto=format&fit=crop" 
-                  alt="Sanctuary Villa Plots" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-
-              <div className="grid grid-cols-4 gap-4">
-                {thumbnails.map((img) => (
-                  <div key={img.id} className="relative h-24 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity">
-                    <Image 
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="rounded-lg"
-                    />
-                  </div>
-                ))}
-              </div>
+              <ImageCarousel images={thumbnails} />
             </div>
 
             {/* Right Column - Details */}
@@ -194,14 +171,25 @@ export default function SanctuaryPage() {
       <section className="py-12 bg-gray-light">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Master Plan</h2>
-          <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
-            <Image 
-              src="https://northstarhomes.in/assets/images/masterplan-sanctuary-Villa.jpg" 
-              alt="Sanctuary Master Plan" 
-              fill 
-              style={{ objectFit: "contain" }}
-              className="rounded-lg"
-            />
+          <div className="space-y-8">
+            <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+              <Image 
+                src="https://northstarhomes.in/assets/images/masterplan-sanctuary-Villa.jpg" 
+                alt="Sanctuary Master Plan" 
+                fill 
+                style={{ objectFit: "contain" }}
+                className="rounded-lg"
+              />
+            </div>
+            <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+              <Image 
+                src="https://northstarhomes.in/assets/images/masterplan-sanctuary-plots.jpg" 
+                alt="Sanctuary Plots Master Plan" 
+                fill 
+                style={{ objectFit: "contain" }}
+                className="rounded-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -210,17 +198,69 @@ export default function SanctuaryPage() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Location</h2>
-          <div className="relative h-[400px] rounded-lg overflow-hidden">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60912.12728754707!2d78.47946579728976!3d17.334695300578616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba47d81291181%3A0x9ae3b78315f2bd67!2sTukkuguda%2C%20Telangana!5e0!3m2!1sen!2sin!4v1651234567890!5m2!1sen!2sin" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen 
-              loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade"
-              className="rounded-lg"
-            ></iframe>
+          <div className="space-y-8">
+            <div className="relative h-[400px] rounded-lg overflow-hidden">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60912.12728754707!2d78.47946579728976!3d17.334695300578616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba47d81291181%3A0x9ae3b78315f2bd67!2sTukkuguda%2C%20Telangana!5e0!3m2!1sen!2sin!4v1651234567890!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg"
+              ></iframe>
+            </div>
+            <div className="relative h-[400px] rounded-lg overflow-hidden">
+              <Image 
+                src="https://northstarhomes.in/assets/images/sanctuary-masterplan-map.jpg" 
+                alt="Sanctuary Location Map" 
+                fill 
+                style={{ objectFit: "contain" }}
+                className="rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Villa Elevation */}
+      <section className="py-12 bg-gray-light">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 text-center">Villa Elevation</h2>
+          <div className="max-w-4xl mx-auto">
+            <ImageCarousel 
+              images={[
+                { id: 1, src: "https://northstarhomes.in/assets/images/sanctuary/villa-elevation-img1.jpg", alt: "Sanctuary Villa Elevation 1" },
+                { id: 2, src: "https://northstarhomes.in/assets/images/sanctuary/villa-elevation-img2.jpg", alt: "Sanctuary Villa Elevation 2" },
+              ]} 
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Images */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+              <Image 
+                src="https://northstarhomes.in/assets/images/sanctuary/Sanctuary_3_1920X10803.jpg" 
+                alt="Sanctuary Villa View 1" 
+                fill 
+                style={{ objectFit: "contain" }}
+                className="rounded-lg"
+              />
+            </div>
+            <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+              <Image 
+                src="https://northstarhomes.in/assets/images/sanctuary/Sanctuary_3_1920X10804.jpg" 
+                alt="Sanctuary Villa View 2" 
+                fill 
+                style={{ objectFit: "contain" }}
+                className="rounded-lg"
+              />
+            </div>
           </div>
         </div>
       </section>

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaHome, FaRulerCombined, FaMountain, FaTree, FaShieldAlt, FaArrowRight, FaBuilding } from 'react-icons/fa';
+import ImageCarousel from '@/components/ImageCarousel';
 
 export default function GoldenValleyPage() {
   // Project details
@@ -33,7 +34,7 @@ export default function GoldenValleyPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600573472550-8090b5e0745e?q=80&w=2070&auto=format&fit=crop')" }}>
+      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://northstarhomes.in/assets/images/goldenvalley/BUILDING01.jpg')" }}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
@@ -77,30 +78,16 @@ export default function GoldenValleyPage() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Images */}
+            {/* Left Column - Image */}
             <div className="lg:col-span-2">
-              <div className="relative h-[400px] md:h-[500px] mb-4 rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Golden Valley Apartment Complex" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
+              <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+                <ImageCarousel 
+                  images={[
+                    { id: 1, src: "https://northstarhomes.in/assets/images/goldenvalley/BUILDING01.jpg", alt: "Golden Valley Building View" },
+                    { id: 2, src: "https://northstarhomes.in/assets/images/goldenvalley/g3.jpg", alt: "Golden Valley View 2" },
+                    { id: 3, src: "https://northstarhomes.in/assets/images/goldenvalley/Club%20HOUSE%2002.jpg", alt: "Golden Valley Clubhouse" },
+                  ]} 
                 />
-              </div>
-
-              <div className="grid grid-cols-4 gap-4">
-                {thumbnails.map((img) => (
-                  <div key={img.id} className="relative h-24 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity">
-                    <Image 
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="rounded-lg"
-                    />
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -190,38 +177,36 @@ export default function GoldenValleyPage() {
         </div>
       </section>
 
-      {/* Apartment Types */}
+      {/* Tower Plans */}
       <section className="py-12 bg-gray-light">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Apartment Types</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">Tower Plans</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="space-y-8">
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">Type A</h3>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
+              <h3 className="text-2xl font-bold mb-4 text-center">Tower A</h3>
+              <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <Image 
-                  src="https://images.unsplash.com/photo-1600585154526-990dced4db3d?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Type A Apartment" 
+                  src="https://northstarhomes.in/assets/images/towera.png" 
+                  alt="Tower A Plan" 
                   fill 
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "contain" }}
                   className="rounded-lg"
                 />
               </div>
-              <p className="text-center text-gray-700 mt-4">Spacious layout with modern design and premium finishes, perfect for families looking for comfort and elegance.</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-center">Type B</h3>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
+              <h3 className="text-2xl font-bold mb-4 text-center">Tower B</h3>
+              <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <Image 
-                  src="https://images.unsplash.com/photo-1598928636135-d146006ff4be?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Type B Apartment" 
+                  src="https://northstarhomes.in/assets/images/towerb.png" 
+                  alt="Tower B Plan" 
                   fill 
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "contain" }}
                   className="rounded-lg"
                 />
               </div>
-              <p className="text-center text-gray-700 mt-4">Contemporary design with open living spaces, large windows, and quality finishes throughout.</p>
             </div>
           </div>
         </div>
@@ -237,7 +222,7 @@ export default function GoldenValleyPage() {
               <h3 className="text-xl font-bold mb-4 text-center">Landscaped Gardens</h3>
               <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
                 <Image 
-                  src="https://images.unsplash.com/photo-1560749003-f4b1e17e2dff?q=80&w=2074&auto=format&fit=crop" 
+                  src="https://northstarhomes.in/assets/images/goldenvalley/goldenvelly4.jpg" 
                   alt="Landscaped Gardens" 
                   fill 
                   style={{ objectFit: "cover" }}
@@ -251,7 +236,7 @@ export default function GoldenValleyPage() {
               <h3 className="text-xl font-bold mb-4 text-center">Community Center</h3>
               <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
                 <Image 
-                  src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?q=80&w=2070&auto=format&fit=crop" 
+                  src="https://northstarhomes.in/assets/images/goldenvalley/g2.jpg" 
                   alt="Community Center" 
                   fill 
                   style={{ objectFit: "cover" }}
@@ -265,7 +250,7 @@ export default function GoldenValleyPage() {
               <h3 className="text-xl font-bold mb-4 text-center">Fitness Center</h3>
               <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
                 <Image 
-                  src="https://images.unsplash.com/photo-1600585154526-990dced4db3d?q=80&w=2070&auto=format&fit=crop" 
+                  src="https://northstarhomes.in/assets/images/goldenvalley/goldenvelly1.jpg" 
                   alt="Fitness Center" 
                   fill 
                   style={{ objectFit: "cover" }}
@@ -273,91 +258,6 @@ export default function GoldenValleyPage() {
                 />
               </div>
               <p className="text-gray-700 text-center">Well-equipped fitness center featuring modern exercise equipment for residents to maintain an active lifestyle.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Project Gallery</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?q=80&w=2070&auto=format&fit=crop" 
-                alt="Building Exterior" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1600585154526-990dced4db3d?q=80&w=2070&auto=format&fit=crop" 
-                alt="Living Room" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=2070&auto=format&fit=crop" 
-                alt="Community Spaces" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1560749003-f4b1e17e2dff?q=80&w=2074&auto=format&fit=crop" 
-                alt="Landscaped Garden" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1600585154526-990dced4db3d?q=80&w=2070&auto=format&fit=crop" 
-                alt="Fitness Center" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="relative h-[250px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?q=80&w=2070&auto=format&fit=crop" 
-                alt="Interior Design" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Location Map */}
-      <section className="py-12 bg-gray-light">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Location Map</h2>
-          <div className="bg-white p-4 rounded-lg shadow-md">
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image 
-                src="https://images.unsplash.com/photo-1600585154526-990dced4db3d?q=80&w=2070&auto=format&fit=crop" 
-                alt="Location Map" 
-                fill 
-                style={{ objectFit: "cover" }}
-                className="rounded-lg"
-              />
-            </div>
-            <div className="mt-4 text-center">
-              <p className="text-lg font-medium">Golden Valley, Madhurawada, Visakhapatnam</p>
-              <p className="text-gray-600">Strategically located with excellent connectivity to key areas of the city</p>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaHome, FaRulerCombined, FaTree, FaSwimmingPool, FaShieldAlt, FaCheck, FaArrowRight } from 'react-icons/fa';
+import ImageCarousel from '@/components/ImageCarousel';
 
 export default function AlluraPage() {
   // Project details
@@ -23,16 +24,18 @@ export default function AlluraPage() {
   };
 
   const thumbnails = [
-    { id: 1, src: "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=2070&auto=format&fit=crop", alt: "Villa Exterior" },
-    { id: 2, src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2070&auto=format&fit=crop", alt: "Living Room" },
-    { id: 3, src: "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?q=80&w=2070&auto=format&fit=crop", alt: "Kitchen" },
-    { id: 4, src: "https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?q=80&w=2071&auto=format&fit=crop", alt: "Master Bedroom" },
+    { id: 1, src: "https://northstarhomes.in/assets/images/allura-sep.jpg", alt: "Allura Villa" },
+    { id: 2, src: "https://northstarhomes.in/assets/images/allura-banner1.jpg", alt: "Allura Villa" },
+    { id: 3, src: "https://northstarhomes.in/assets/images/allura-banner2.jpg", alt: "Allura Villa" },
+    { id: 4, src: "https://northstarhomes.in/assets/images/allura-banner3.jpg", alt: "Allura Villa" },
+    { id: 5, src: "https://northstarhomes.in/assets/images/allura-banner4.jpg", alt: "Allura Villa" },
+    { id: 6, src: "https://northstarhomes.in/assets/images/allura-banner5.jpg", alt: "Allura Villa" },
   ];
 
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=2070&auto=format&fit=crop')" }}>
+      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://northstarhomes.in/assets/images/allura-sep.jpg')" }}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
@@ -78,29 +81,7 @@ export default function AlluraPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Images */}
             <div className="lg:col-span-2">
-              <div className="relative h-[400px] md:h-[500px] mb-4 rounded-lg overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Allura Villa" 
-                  fill 
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </div>
-
-              <div className="grid grid-cols-4 gap-4">
-                {thumbnails.map((img) => (
-                  <div key={img.id} className="relative h-24 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity">
-                    <Image 
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="rounded-lg"
-                    />
-                  </div>
-                ))}
-              </div>
+              <ImageCarousel images={thumbnails} />
             </div>
 
             {/* Right Column - Details */}
