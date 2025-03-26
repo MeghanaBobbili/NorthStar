@@ -165,6 +165,27 @@ export default function HillsidePage() {
         </div>
       </section>
 
+      {/* Location */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 text-center">Location</h2>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7615.230677850201!2d78.325122!3d17.382233!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb94e5a79c431f%3A0xf5db3ae7e7ce52bb!2sNorthstar%20Hillside!5e0!3m2!1sen!2sin!4v1573554146654!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Master Plan */}
       <section className="py-12 bg-gray-light">
         <div className="container mx-auto px-4">

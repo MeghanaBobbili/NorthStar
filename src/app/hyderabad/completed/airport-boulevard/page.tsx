@@ -165,6 +165,27 @@ export default function AirportBoulevardPage() {
         </div>
       </section>
 
+      {/* Location */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 text-center">Location</h2>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d15243.574714581244!2d78.4762653!3d17.2239464!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3bcba52be7cb9461%3A0x1e000aadb04e3134!2sNORTH%20STAR%20Airport%20Boulevard%20Tukkuguda%20-%20Airport%20View%20Point%20Rd%20Almasguda%2C%20Telangana%20501218!3m2!1d17.2239464!2d78.4762653!5e0!3m2!1sen!2sin!4v1639556765175!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Master Plan */}
       <section className="py-12 bg-gray-light">
         <div className="container mx-auto px-4">

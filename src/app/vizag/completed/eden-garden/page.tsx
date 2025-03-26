@@ -83,9 +83,9 @@ export default function EdenGardenPage() {
               <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <ImageCarousel 
                   images={[
-                    { id: 1, src: "https://northstarhomes.in/assets/images/edengarden-vizagbanner.png", alt: "Eden Garden Banner" },
-                    { id: 2, src: "https://northstarhomes.in/assets/images/DJI_0392.jpg", alt: "Eden Garden View 1" },
-                    { id: 3, src: "https://northstarhomes.in/assets/images/DJI_0410.jpg", alt: "Eden Garden View 2" },
+                    { id: 1, src: "/images/eden-garden-va/edengarden-vizagbanner.png", alt: "Eden Garden Banner" },
+                    { id: 2, src: "/images/eden-garden-va/DJI_0392.jpg", alt: "Eden Garden View 1" },
+                    { id: 3, src: "/images/eden-garden-va/DJI_0410.jpg", alt: "Eden Garden View 2" },
                   ]} 
                 />
               </div>
@@ -179,6 +179,27 @@ export default function EdenGardenPage() {
         </div>
       </section>
 
+      {/* Location */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 text-center">Location</h2>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d15199.549466533721!2d83.3327669!3d17.7499455!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3a395d7b33adf197%3A0x6b169bf7b9e53bc6!2sNORTHSTAR%20HOMES%20%2CEDEN%20GARDEN%20plot%20no%3A9-344%20s.no%3A167%20behind%20CMR%20functional%20hall%20Visakhapatnam%2C%20Andhra%20Pradesh%20530017%2C%20India!3m2!1d17.7499455!2d83.3327669!5e0!3m2!1sen!2sin!4v1639631865248!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Master Plan */}
       <section className="py-12 bg-gray-light">
         <div className="container mx-auto px-4">
@@ -186,7 +207,7 @@ export default function EdenGardenPage() {
           <div className="bg-white p-6 rounded-lg shadow-md">
             <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
               <Image 
-                src="https://northstarhomes.in/assets/images/Master-Planedenvizag.jpg" 
+                src="/images/eden-garden-va/Master-Planedenvizag.jpg" 
                 alt="Eden Garden Master Plan" 
                 fill 
                 style={{ objectFit: "contain" }}

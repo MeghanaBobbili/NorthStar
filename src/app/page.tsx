@@ -95,25 +95,25 @@ export default function Home() {
     {
       title: "NORTHSTAR SP PALACIO",
       subtitle: "Premium 3 and 4 BHK apartments in Abids, Hyderabad",
-      image: "https://northstarhomes.in/assets/images/sp_palacio-banner1.jpg",
+      image: "/images/sp_palacio-banner1.jpg",
       link: "/hyderabad/ongoing/sp-palacio",
     },
     {
       title: "ALLURA",
       subtitle: "LUXURY VILLAS IN KOKAPET, HYDERABAD",
-      image: "https://northstarhomes.in/assets/images/allura-banner2.jpg",
+      image: "/images/allura-banner2.jpg",
       link: "/hyderabad/ongoing/allura",
     },
     {
       title: "SANCTUARY, MAHESHWARAM",
       subtitle: "Premium Plots & Villas near Tukkuguda in Srisailam Highway",
-      image: "https://northstarhomes.in/assets/images/sanctuary/sanctuary-thumbnail.jpg",
+      image: "/images/sanctuary-thumbnail.jpg",
       link: "/hyderabad/ongoing/sanctuary",
     },
     {
       title: "AIRPORT BOULEVARD COMMERCIAL",
       subtitle: "Commercial property IN TUKKUGUDA, HYDERABAD, NEAR SHAMSHABAD AIRPORT",
-      image: "https://northstarhomes.in/assets/images/airport-banner.jpg",
+      image: "/images/airport-banner.jpg",
       link: "/hyderabad/ongoing/airport-boulevard-commercial",
     },
   ];
@@ -123,13 +123,13 @@ export default function Home() {
     {
       title: "PARK AVENUE",
       subtitle: "PARK AVE - 2, 2.5, 3 BHK PREMIUM APARTMENTS AT MADHURAWADA VISAKHAPATNAM",
-      image: "https://northstarhomes.in/assets/images/parkave-banner2.jpg",
+      image: "/images/parkave-banner2.jpg",
       link: "/vizag/ongoing/park-avenue",
     },
     {
       title: "GOLDEN VALLEY",
       subtitle: "PREMIUM APARTMENTS AT MADHURAWADA VISAKHAPATNAM - GOLDEN VALLEY",
-      image: "https://northstarhomes.in/assets/images/goldenvalley/BUILDING01.jpg",
+      image: "/images/goldenvalley/BUILDING01.jpg",
       link: "/vizag/ongoing/golden-valley",
     },
   ];
@@ -226,7 +226,7 @@ export default function Home() {
             <div className="relative">
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <Image 
-                  src="https://northstarhomes.in/assets/images/house-img.jpeg" 
+                  src="/images/house-img.jpg" 
                   alt="Invest in Your Future with Northstar Homes" 
                   fill
                   style={{ objectFit: "cover" }}
@@ -334,7 +334,7 @@ export default function Home() {
             <div className="relative">
               <div className="relative h-[500px] rounded-lg overflow-hidden shadow-lg">
                 <Image 
-                  src="https://northstarhomes.in/assets/images/sec-one-img.webp" 
+                  src="/images/sec-one-img.webp" 
                   alt="About Northstar Homes" 
                   fill
                   style={{ objectFit: "cover" }}
@@ -461,7 +461,7 @@ export default function Home() {
             <TeamMember 
               name="K Laxma Reddy"
               position="CHAIRMAN"
-              image="https://northstarhomes.in/assets/images/KLaxmaReddyd.jpg"
+              image="/images/team-members/KLaxmaReddyd.jpg"
               socialLinks={{
                 linkedin: "#",
                 twitter: "#",
@@ -471,7 +471,7 @@ export default function Home() {
             <TeamMember 
               name="Narayan Rao Gali"
               position="VICE-CHAIRMAN"
-              image="https://northstarhomes.in/assets/images/SriNarayanRaoGali.jpg"
+              image="/images/team-members/SriNarayanRaoGali.jpg"
               socialLinks={{
                 linkedin: "#",
                 twitter: "#",
@@ -481,7 +481,7 @@ export default function Home() {
             <TeamMember 
               name="Uttam Korupol"
               position="MANAGING PARTNER"
-              image="https://northstarhomes.in/assets/images/UttamKorupol.jpg"
+              image="/images/team-members/UttamKorupol.jpg"
               socialLinks={{
                 linkedin: "#",
                 twitter: "#",
@@ -491,7 +491,7 @@ export default function Home() {
             <TeamMember 
               name="Anil Kumar Reddy"
               position="PROJECT PARTNER, NORTHSTAR HOMES"
-              image="https://northstarhomes.in/assets/images/AnilKumarReddy.jpg"
+              image="/images/team-members/AnilKumarReddy.jpg"
               socialLinks={{
                 linkedin: "#",
                 twitter: "#",
@@ -501,7 +501,7 @@ export default function Home() {
             <TeamMember 
               name="Amarendra Raju"
               position="PROJECT PARTNER, NORTHSTAR HOMES"
-              image="https://northstarhomes.in/assets/images/AmarendraRaju.jpg"
+              image="/images/team-members/AmarendraRaju.jpg"
               socialLinks={{
                 linkedin: "#",
                 twitter: "#",

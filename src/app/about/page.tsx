@@ -10,7 +10,7 @@ export default function AboutPage() {
       id: 1,
       name: "K Laxma Reddy",
       position: "CHAIRMAN",
-      image: "https://northstarhomes.in/assets/images/KLaxmaReddyd.jpg",
+      image: "/images/team-members/KLaxmaReddyd.jpg",
       socialLinks: {
         twitter: "#",
         linkedin: "#",
@@ -21,7 +21,7 @@ export default function AboutPage() {
       id: 2,
       name: "Narayan Rao Gali",
       position: "VICE-CHAIRMAN",
-      image: "https://northstarhomes.in/assets/images/SriNarayanRaoGali.jpg",
+      image: "/images/team-members/SriNarayanRaoGali.jpg",
       socialLinks: {
         twitter: "#",
         linkedin: "#",
@@ -32,7 +32,7 @@ export default function AboutPage() {
       id: 3,
       name: "Uttam Korupol",
       position: "MANAGING PARTNER",
-      image: "https://northstarhomes.in/assets/images/UttamKorupol.jpg",
+      image: "/images/team-members/UttamKorupol.jpg",
       socialLinks: {
         twitter: "#",
         linkedin: "#",
@@ -43,7 +43,7 @@ export default function AboutPage() {
       id: 4,
       name: "Anil Kumar Reddy",
       position: "PROJECT PARTNER, NORTHSTAR HOMES",
-      image: "https://northstarhomes.in/assets/images/AnilKumarReddy.jpg",
+      image: "/images/team-members/AnilKumarReddy.jpg",
       socialLinks: {
         twitter: "#",
         linkedin: "#",
@@ -54,7 +54,7 @@ export default function AboutPage() {
       id: 5,
       name: "Amarendra Raju",
       position: "PROJECT PARTNER, NORTHSTAR HOMES",
-      image: "https://northstarhomes.in/assets/images/AmarendraRaju.jpg",
+      image: "/images/team-members/AmarendraRaju.jpg",
       socialLinks: {
         twitter: "#",
         linkedin: "#",
@@ -85,7 +85,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[300px] bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=2896&auto=format&fit=crop')" }}>
+      <section className="relative h-[300px] bg-cover bg-center flex items-center" style={{ backgroundImage: "url('/images/house-img.jpg')" }}>
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
@@ -132,7 +132,7 @@ export default function AboutPage() {
               <div className="relative">
                 <div className="relative h-[500px] rounded-lg overflow-hidden shadow-xl">
                   <Image 
-                    src="/images/about-img.jpg" 
+                    src="/images/integrity-two.jpeg" 
                     alt="Northstar Homes Story" 
                     fill
                     style={{ objectFit: "cover" }}

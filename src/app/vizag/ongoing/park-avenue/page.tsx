@@ -83,11 +83,11 @@ export default function ParkAvenuePage() {
               <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <ImageCarousel 
                   images={[
-                    { id: 1, src: "https://northstarhomes.in/assets/images/park-sep.jpeg", alt: "Park Avenue View 1" },
-                    { id: 2, src: "https://northstarhomes.in/assets/images/parkave-banner2.jpg", alt: "Park Avenue View 2" },
-                    { id: 3, src: "https://northstarhomes.in/assets/images/parkave-banner1.jpg", alt: "Park Avenue View 3" },
-                    { id: 4, src: "https://northstarhomes.in/assets/images/parkave-banner3.jpg", alt: "Park Avenue View 4" },
-                    { id: 5, src: "https://northstarhomes.in/assets/images/parkave-banner4.jpg", alt: "Park Avenue View 5" },
+                    { id: 1, src: "/images/park-ave-va/park-sep.jpg", alt: "Park Avenue View 1" },
+                    { id: 2, src: "/images/park-ave-va/parkave-banner2.jpg", alt: "Park Avenue View 2" },
+                    { id: 3, src: "/images/park-ave-va/parkave-banner1.jpg", alt: "Park Avenue View 3" },
+                    { id: 4, src: "/images/park-ave-va/parkave-banner3.jpg", alt: "Park Avenue View 4" },
+                    { id: 5, src: "/images/park-ave-va/parkave-banner4.jpg", alt: "Park Avenue View 5" },
                   ]} 
                 />
               </div>
@@ -189,7 +189,7 @@ export default function ParkAvenuePage() {
               <h3 className="text-2xl font-bold mb-4 text-center">Master Plan</h3>
               <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <Image 
-                  src="https://northstarhomes.in/assets/images/parkave-masterplan.jpg" 
+                  src="/images/park-ave-va/parkave-masterplan.jpg" 
                   alt="Master Plan" 
                   fill 
                   style={{ objectFit: "contain" }}
@@ -202,7 +202,7 @@ export default function ParkAvenuePage() {
               <h3 className="text-2xl font-bold mb-4 text-center">Typical Floor Plan</h3>
               <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <Image 
-                  src="https://northstarhomes.in/assets/images/parkave-typicalplan.jpg" 
+                  src="/images/park-ave-va/parkave-typicalplan.jpg" 
                   alt="Typical Floor Plan" 
                   fill 
                   style={{ objectFit: "contain" }}
@@ -224,7 +224,7 @@ export default function ParkAvenuePage() {
               <h3 className="text-xl font-bold mb-4 text-center">Rooftop Infinity Pool</h3>
               <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
                 <Image 
-                  src="https://northstarhomes.in/assets/images/gallery-img-10.jpg" 
+                  src="/images/park-ave-va/gallery-img-10.jpg" 
                   alt="Infinity Pool" 
                   fill 
                   style={{ objectFit: "cover" }}
@@ -238,7 +238,7 @@ export default function ParkAvenuePage() {
               <h3 className="text-xl font-bold mb-4 text-center">Modern Clubhouse</h3>
               <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
                 <Image 
-                  src="https://northstarhomes.in/assets/images/parkave-clubhouse.jpg" 
+                  src="/images/park-ave-va/parkave-clubhouse.jpg" 
                   alt="Clubhouse" 
                   fill 
                   style={{ objectFit: "cover" }}
@@ -252,7 +252,7 @@ export default function ParkAvenuePage() {
               <h3 className="text-xl font-bold mb-4 text-center">Fitness Center</h3>
               <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
                 <Image 
-                  src="https://northstarhomes.in/assets/images/parkave-amenities.jpg" 
+                  src="/images/park-ave-va/parkave-amenities.jpg" 
                   alt="Fitness Center" 
                   fill 
                   style={{ objectFit: "cover" }}
@@ -260,6 +260,27 @@ export default function ParkAvenuePage() {
                 />
               </div>
               <p className="text-gray-700 text-center">State-of-the-art fitness center equipped with modern exercise machines, cardio equipment, and yoga space.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Location */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 text-center">Location</h2>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.652129284746!2d83.36721091488229!3d17.80803898782784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a395bc2d7edba5b%3A0x8802e1e1b2772130!2sPark%20Avenue%20Residential%20Apartments%20by%20North%20Star%20Homes!5e0!3m2!1sen!2sin!4v1583990319524!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg"
+              ></iframe>
             </div>
           </div>
         </div>

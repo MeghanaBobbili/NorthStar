@@ -8,7 +8,7 @@ export default function HyderabadCompletedPage() {
       id: 1,
       title: "THE LEELA",
       subtitle: "Premium Apartments in Padmarao Nagar, Hyderabad",
-      image: "https://northstarhomes.in/assets/images/leela01.jpg",
+      image: "/images/leela01.jpg",
       link: "/hyderabad/completed/the-leela",
       featured: true,
     },
@@ -16,7 +16,7 @@ export default function HyderabadCompletedPage() {
       id: 2,
       title: "EDEN GARDEN",
       subtitle: "Luxury Villas in Kompally, Hyderabad",
-      image: "https://northstarhomes.in/assets/images/edengarden01.jpg",
+      image: "/images/edengarden01.jpg",
       link: "/hyderabad/completed/eden-garden",
       featured: true,
     },
@@ -24,7 +24,7 @@ export default function HyderabadCompletedPage() {
       id: 3,
       title: "HILLSIDE",
       subtitle: "Luxury Villas in Gandipet, Hyderabad",
-      image: "https://northstarhomes.in/assets/images/hillside-01.jpg",
+      image: "/images/hillside-01.jpg",
       link: "/hyderabad/completed/hillside",
       featured: false,
     },
@@ -32,7 +32,7 @@ export default function HyderabadCompletedPage() {
       id: 4,
       title: "AIRPORT BOULEVARD",
       subtitle: "Smart Villas in Tukkuguda, Hyderabad",
-      image: "https://northstarhomes.in/assets/images/airport-boulevard01.jpg",
+      image: "/images/airport-boulevard01.jpg",
       link: "/hyderabad/completed/airport-boulevard",
       featured: false,
     },
@@ -40,7 +40,7 @@ export default function HyderabadCompletedPage() {
       id: 5,
       title: "GARDEN SUITES",
       subtitle: "Premium Apartments in Banjara Hills, Hyderabad",
-      image: "https://northstarhomes.in/assets/images/garden-suites01.jpg",
+      image: "/images/garden-suites01.jpg",
       link: "/hyderabad/completed/garden-suites",
       featured: true,
     },
@@ -48,7 +48,7 @@ export default function HyderabadCompletedPage() {
       id: 6,
       title: "VEDA",
       subtitle: "Signature Apartments in Himayatnagar, Hyderabad",
-      image: "https://northstarhomes.in/assets/images/veda01.jpg",
+      image: "/images/veda01.jpg",
       link: "/hyderabad/completed/veda",
       featured: false,
     },
@@ -184,13 +184,8 @@ export default function HyderabadCompletedPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <Image
-                    src="/images/about-img.jpg"
-                    alt="Testimonial"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                  <span className="text-xl font-bold text-primary">AR</span>
                 </div>
                 <div>
                   <h4 className="font-bold">Anil Reddy</h4>
@@ -204,13 +199,8 @@ export default function HyderabadCompletedPage() {
             
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <Image
-                    src="/images/property-2.jpg"
-                    alt="Testimonial"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                  <span className="text-xl font-bold text-primary">SK</span>
                 </div>
                 <div>
                   <h4 className="font-bold">Sanjana Kapoor</h4>

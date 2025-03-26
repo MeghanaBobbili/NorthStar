@@ -165,6 +165,27 @@ export default function GardenSuitesPage() {
         </div>
       </section>
 
+      {/* Location */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 text-center">Location</h2>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.96626379025!2d78.43191011431873!3d17.413406588063104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9728a069e0df%3A0x7d7ead2b338c76!2sNorthstar+Garden+Suites%2C+Rd+Number+12%2C+Banjara+Green+Colony%2C+Ministers+Colony%2C+Anand+Banjara+Colony%2C+Banjara+Hills%2C+Hyderabad%2C+Telangana+500034!5e0!3m2!1sen!2sin!4v1490597322255"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Floor Plans */}
       <section className="py-12 bg-gray-light">
         <div className="container mx-auto px-4">

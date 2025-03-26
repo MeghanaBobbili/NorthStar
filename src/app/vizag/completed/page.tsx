@@ -9,7 +9,7 @@ export default function VizagCompletedPage() {
       id: "eden-garden",
       title: "EDEN GARDEN",
       subtitle: "Luxury 3 BHK Apartments in Vizag",
-      image: "https://northstarhomes.in/assets/images/edengardenva.jpg",
+      image: "/images/edengardenva.jpg",
       link: "/vizag/completed/eden-garden"
     }
   ];

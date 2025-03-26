@@ -34,7 +34,7 @@ export default function GoldenValleyPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://northstarhomes.in/assets/images/goldenvalley/BUILDING01.jpg')" }}>
+      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('/images/goldenvalley/BUILDING01.jpg')" }}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
@@ -83,9 +83,9 @@ export default function GoldenValleyPage() {
               <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <ImageCarousel 
                   images={[
-                    { id: 1, src: "https://northstarhomes.in/assets/images/goldenvalley/BUILDING01.jpg", alt: "Golden Valley Building View" },
-                    { id: 2, src: "https://northstarhomes.in/assets/images/goldenvalley/g3.jpg", alt: "Golden Valley View 2" },
-                    { id: 3, src: "https://northstarhomes.in/assets/images/goldenvalley/Club%20HOUSE%2002.jpg", alt: "Golden Valley Clubhouse" },
+                    { id: 1, src: "/images/goldenvalley/BUILDING01.jpg", alt: "Golden Valley Building View" },
+                    { id: 2, src: "/images/goldenvalley/g3.jpg", alt: "Golden Valley View 2" },
+                    { id: 3, src: "/images/goldenvalley/Club%20HOUSE%2002.jpg", alt: "Golden Valley Clubhouse" },
                   ]} 
                 />
               </div>
@@ -177,6 +177,24 @@ export default function GoldenValleyPage() {
         </div>
       </section>
 
+      {/* Master Plan Section */}
+      <section className="py-12 bg-gray-light">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 text-center">Master Plan</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+              <Image 
+                src="/images/goldenvalley/master-plan-golden.jpg" 
+                alt="Golden Valley Master Plan" 
+                fill 
+                style={{ objectFit: "contain" }}
+                className="rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Tower Plans */}
       <section className="py-12 bg-gray-light">
         <div className="container mx-auto px-4">
@@ -187,7 +205,7 @@ export default function GoldenValleyPage() {
               <h3 className="text-2xl font-bold mb-4 text-center">Tower A</h3>
               <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <Image 
-                  src="https://northstarhomes.in/assets/images/towera.png" 
+                  src="/images/goldenvalley/towera.png" 
                   alt="Tower A Plan" 
                   fill 
                   style={{ objectFit: "contain" }}
@@ -200,7 +218,7 @@ export default function GoldenValleyPage() {
               <h3 className="text-2xl font-bold mb-4 text-center">Tower B</h3>
               <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <Image 
-                  src="https://northstarhomes.in/assets/images/towerb.png" 
+                  src="/images/goldenvalley/towerb.png" 
                   alt="Tower B Plan" 
                   fill 
                   style={{ objectFit: "contain" }}
@@ -222,7 +240,7 @@ export default function GoldenValleyPage() {
               <h3 className="text-xl font-bold mb-4 text-center">Landscaped Gardens</h3>
               <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
                 <Image 
-                  src="https://northstarhomes.in/assets/images/goldenvalley/goldenvelly4.jpg" 
+                  src="/images/goldenvalley/goldenvelly4.jpg" 
                   alt="Landscaped Gardens" 
                   fill 
                   style={{ objectFit: "cover" }}
@@ -236,7 +254,7 @@ export default function GoldenValleyPage() {
               <h3 className="text-xl font-bold mb-4 text-center">Community Center</h3>
               <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
                 <Image 
-                  src="https://northstarhomes.in/assets/images/goldenvalley/g2.jpg" 
+                  src="/images/goldenvalley/g2.jpg" 
                   alt="Community Center" 
                   fill 
                   style={{ objectFit: "cover" }}
@@ -250,7 +268,7 @@ export default function GoldenValleyPage() {
               <h3 className="text-xl font-bold mb-4 text-center">Fitness Center</h3>
               <div className="relative h-[200px] rounded-lg overflow-hidden mb-4">
                 <Image 
-                  src="https://northstarhomes.in/assets/images/goldenvalley/goldenvelly1.jpg" 
+                  src="/images/goldenvalley/goldenvelly1.jpg" 
                   alt="Fitness Center" 
                   fill 
                   style={{ objectFit: "cover" }}
@@ -258,6 +276,27 @@ export default function GoldenValleyPage() {
                 />
               </div>
               <p className="text-gray-700 text-center">Well-equipped fitness center featuring modern exercise equipment for residents to maintain an active lifestyle.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Location */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 text-center">Location</h2>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15193.807135657833!2d83.3798025!3d17.817444!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeb55d33d386f3ecb!2sNorthstar%20Homes%20Golden%20valley!5e0!3m2!1sen!2sin!4v1582030491217!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg"
+              ></iframe>
             </div>
           </div>
         </div>
