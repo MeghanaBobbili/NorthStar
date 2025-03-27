@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaHome, FaRulerCombined, FaTree, FaWater, FaShieldAlt, FaArrowRight } from 'react-icons/fa';
 import ImageCarousel from '@/components/ImageCarousel';
+import DownloadBrochure from '@/components/DownloadBrochure';
 
 export default function EdenGardenPage() {
   // Project details
@@ -33,7 +34,7 @@ export default function EdenGardenPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center">
+      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('/images/eden-garden/eden-garden.jpg')" }}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
@@ -82,9 +83,9 @@ export default function EdenGardenPage() {
               <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <ImageCarousel 
                   images={[
-                    { id: 1, src: "https://northstarhomes.in/assets/images/eden-garden.jpg", alt: "Eden Garden Banner" },
-                    { id: 2, src: "https://northstarhomes.in/assets/images/EGK_7_978x418.jpg", alt: "Eden Garden View 1" },
-                    { id: 3, src: "https://northstarhomes.in/assets/images/EGK_West%20Rear_978x418.jpg", alt: "Eden Garden West Rear View" },
+                    { id: 1, src: "/images/eden-garden/eden-garden.jpg", alt: "Eden Garden Banner" },
+                    { id: 2, src: "/images/eden-garden/EGK_7_978x418.jpg", alt: "Eden Garden View 1" },
+                    { id: 3, src: "/images/eden-garden/EGK_West%20Rear_978x418.jpg", alt: "Eden Garden West Rear View" },
                   ]} 
                 />
               </div>
@@ -93,7 +94,7 @@ export default function EdenGardenPage() {
             {/* Right Column - Details */}
             <div className="bg-white p-6 rounded-lg shadow-md h-fit">
               <div className="mb-2">
-                <span className="text-sm font-medium bg-success/10 text-success px-3 py-1 rounded-full">
+                <span className="text-sm font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">
                   COMPLETED PROJECT
                 </span>
               </div>
@@ -126,10 +127,14 @@ export default function EdenGardenPage() {
                 </div>
               </div>
               
-              <div className="pt-6 border-t border-gray-200">
+              <div className="pt-6 border-t border-gray-200 space-y-4">
                 <Link href="/contact" className="btn-primary w-full flex justify-center items-center">
                   Enquire Now
                 </Link>
+                <DownloadBrochure 
+                  projectName="Eden Garden"
+                  brochurePath="/brochures/ghmc-approvedplans.pdf"
+                />
               </div>
             </div>
           </div>
@@ -179,7 +184,7 @@ export default function EdenGardenPage() {
           <div className="max-w-4xl mx-auto">
             <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
               <Image 
-                src="https://northstarhomes.in/assets/images/masterplaneden.jpg" 
+                src="/images/eden-garden/masterplaneden.jpg" 
                 alt="Eden Garden Master Plan" 
                 fill 
                 style={{ objectFit: "contain" }}
@@ -198,13 +203,8 @@ export default function EdenGardenPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <Image
-                    src="/images/property-1.jpg"
-                    alt="Testimonial"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                  <span className="text-xl font-bold text-primary">RK</span>
                 </div>
                 <div>
                   <h4 className="font-bold">Ravi Kumar</h4>
@@ -218,13 +218,8 @@ export default function EdenGardenPage() {
             
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <Image
-                    src="/images/property-2.jpg"
-                    alt="Testimonial"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                  <span className="text-xl font-bold text-primary">PS</span>
                 </div>
                 <div>
                   <h4 className="font-bold">Priya Sharma</h4>

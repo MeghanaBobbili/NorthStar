@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaMapMarkerAlt, FaBuilding, FaRulerCombined, FaStore, FaPlane, FaRoad, FaParking, FaArrowRight } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaBuilding, FaRulerCombined, FaStore, FaPlane, FaRoad, FaParking, FaArrowRight, FaHome, FaTree, FaWater, FaShieldAlt, FaWhatsapp } from 'react-icons/fa';
+import ImageCarousel from '@/components/ImageCarousel';
+import DownloadBrochure from '@/components/DownloadBrochure';
 
 export default function AirportBoulevardCommercialPage() {
   // Project details
@@ -33,7 +35,7 @@ export default function AirportBoulevardCommercialPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop')" }}>
+      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('/images/airport-banner.jpg')" }}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
@@ -81,7 +83,7 @@ export default function AirportBoulevardCommercialPage() {
             <div className="lg:col-span-2">
               <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <Image 
-                  src="https://northstarhomes.in/assets/images/airport-banner.jpg" 
+                  src="/images/airport-banner.jpg" 
                   alt="Airport Boulevard Commercial" 
                   fill 
                   style={{ objectFit: "cover" }}
@@ -130,10 +132,20 @@ export default function AirportBoulevardCommercialPage() {
                 </div>
               </div>
               
-              <div className="pt-6 border-t border-gray-200">
-                <Link href="/contact" className="btn-primary w-full flex justify-center items-center">
-                  Get in Touch
-                </Link>
+              <div className="space-y-4">
+                <a
+                  href="https://wa.me/919100000000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full px-4 py-2 text-sm font-medium text-white bg-green-600 border border-transparent rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 flex items-center justify-center gap-2"
+                >
+                  <FaWhatsapp className="h-4 w-4" />
+                  Enquire Now
+                </a>
+                <DownloadBrochure 
+                  projectName="Airport Boulevard Commercial"
+                  brochurePath="/brochures/ghmc-approvedplans.pdf"
+                />
               </div>
             </div>
           </div>

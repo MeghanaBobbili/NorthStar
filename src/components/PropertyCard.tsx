@@ -16,6 +16,7 @@ interface Property {
   area: number;
   image: string;
   featured?: boolean;
+  link: string;
 }
 
 interface PropertyCardProps {
@@ -74,7 +75,7 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
         </div>
         
         <Link 
-          href={`/properties/${property.id}`}
+          href={property.link}
           className="block w-full text-center bg-white border border-primary text-primary hover:bg-primary hover:text-white mt-5 py-2 rounded transition duration-300"
         >
           View Details

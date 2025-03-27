@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaMapMarkerAlt, FaBuilding, FaRulerCombined, FaSwimmingPool, FaTree, FaShieldAlt, FaArrowRight } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaBuilding, FaRulerCombined, FaSwimmingPool, FaTree, FaShieldAlt, FaArrowRight, FaHome, FaWater, FaWhatsapp } from 'react-icons/fa';
 import ImageCarousel from '@/components/ImageCarousel';
+import DownloadBrochure from '@/components/DownloadBrochure';
 
 export default function ParkAvenuePage() {
   // Project details
@@ -133,10 +134,20 @@ export default function ParkAvenuePage() {
                 </div>
               </div>
               
-              <div className="pt-6 border-t border-gray-200">
-                <Link href="/contact" className="btn-primary w-full flex justify-center items-center">
+              <div className="space-y-4">
+                <a
+                  href="https://wa.me/919100000000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full px-4 py-2 text-sm font-medium text-white bg-green-600 border border-transparent rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 flex items-center justify-center gap-2"
+                >
+                  <FaWhatsapp className="h-4 w-4" />
                   Enquire Now
-                </Link>
+                </a>
+                <DownloadBrochure 
+                  projectName="Park Avenue"
+                  brochurePath="/brochures/ghmc-approvedplans.pdf"
+                />
               </div>
             </div>
           </div>

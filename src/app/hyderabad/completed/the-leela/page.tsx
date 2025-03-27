@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaBuilding, FaRulerCombined, FaBed, FaBath, FaSwimmingPool, FaTree, FaArrowRight } from 'react-icons/fa';
 import ImageCarousel from '@/components/ImageCarousel';
+import DownloadBrochure from '@/components/DownloadBrochure';
 
 export default function TheLeelaPage() {
   // Project details
@@ -82,9 +83,9 @@ export default function TheLeelaPage() {
               <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <ImageCarousel 
                   images={[
-                    { id: 1, src: "https://northstarhomes.in/assets/images/leela-banner.jpg", alt: "The Leela Banner" },
-                    { id: 2, src: "https://northstarhomes.in/assets/images/ext-corner-front-view.jpg", alt: "The Leela Corner Front View" },
-                    { id: 3, src: "https://northstarhomes.in/assets/images/night-view-2.jpg", alt: "The Leela Night View" },
+                    { id: 1, src: "/images/leela/leela-banner.jpg", alt: "The Leela Banner" },
+                    { id: 2, src: "/images/leela/ext-corner-front-view.jpg", alt: "The Leela Corner Front View" },
+                    { id: 3, src: "/images/leela/night-view-2.jpg", alt: "The Leela Night View" },
                   ]} 
                 />
               </div>
@@ -126,10 +127,14 @@ export default function TheLeelaPage() {
                 </div>
               </div>
               
-              <div className="pt-6 border-t border-gray-200">
+              <div className="pt-6 border-t border-gray-200 space-y-4">
                 <Link href="/contact" className="btn-primary w-full flex justify-center items-center">
                   Enquire Now
                 </Link>
+                <DownloadBrochure 
+                  projectName="The Leela"
+                  brochurePath="/brochures/ghmc-approvedplans.pdf"
+                />
               </div>
             </div>
           </div>
@@ -179,7 +184,7 @@ export default function TheLeelaPage() {
           <div className="max-w-4xl mx-auto">
             <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
               <Image 
-                src="https://northstarhomes.in/assets/images/Leela%20master%20plan.jpg" 
+                src="/images/leela/Leela%20master%20plan.jpg" 
                 alt="The Leela Master Plan" 
                 fill 
                 style={{ objectFit: "contain" }}
@@ -217,13 +222,8 @@ export default function TheLeelaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <Image
-                    src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop"
-                    alt="Resident"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                  <span className="text-xl font-bold text-primary">AR</span>
                 </div>
                 <div>
                   <h4 className="font-bold">Anil Reddy</h4>
@@ -237,13 +237,8 @@ export default function TheLeelaPage() {
             
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <Image
-                    src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=2070&auto=format&fit=crop"
-                    alt="Resident"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                  <span className="text-xl font-bold text-primary">LP</span>
                 </div>
                 <div>
                   <h4 className="font-bold">Lakshmi Prasad</h4>

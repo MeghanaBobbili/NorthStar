@@ -152,7 +152,7 @@ export default function CareersPage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image 
-                src="/images/about-img.jpg" 
+                src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                 alt="Northstar Team" 
                 fill 
                 style={{ objectFit: "cover" }}
@@ -184,7 +184,7 @@ export default function CareersPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="order-2 md:order-1 relative h-[400px] rounded-lg overflow-hidden">
               <Image 
-                src="/images/property-1.jpg" 
+                src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGluZGlhbiUyMGVtcGxveWVlfGVufDB8fDB8fHww" 
                 alt="Employee Benefits" 
                 fill 
                 style={{ objectFit: "cover" }}

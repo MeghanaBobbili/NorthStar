@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaMapMarkerAlt, FaHome, FaRulerCombined, FaTree, FaWater, FaShieldAlt, FaArrowRight } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaHome, FaRulerCombined, FaTree, FaWater, FaShieldAlt, FaArrowRight, FaWhatsapp } from 'react-icons/fa';
 import ImageCarousel from '@/components/ImageCarousel';
+import DownloadBrochure from '@/components/DownloadBrochure';
 
 export default function HillsidePage() {
   // Project details
@@ -75,9 +76,9 @@ export default function HillsidePage() {
               <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <ImageCarousel 
                   images={[
-                    { id: 1, src: "https://northstarhomes.in/assets/images/A30I9544.jpg", alt: "Hillside Banner" },
-                    { id: 2, src: "https://northstarhomes.in/assets/images/HS_G_978x418-7.jpg", alt: "Hillside View 1" },
-                    { id: 3, src: "https://northstarhomes.in/assets/images/HS_G_978x418-6.jpg", alt: "Hillside View 2" },
+                    { id: 1, src: "/images/hillside/A30I9544.jpg", alt: "Hillside Banner" },
+                    { id: 2, src: "/images/hillside/HS_G_978x418-7.jpg", alt: "Hillside View 1" },
+                    { id: 3, src: "/images/hillside/HS_G_978x418-6.jpg", alt: "Hillside View 2" },
                   ]} 
                 />
               </div>
@@ -119,10 +120,20 @@ export default function HillsidePage() {
                 </div>
               </div>
               
-              <div className="pt-6 border-t border-gray-200">
-                <Link href="/contact" className="btn-primary w-full flex justify-center items-center">
+              <div className="space-y-4">
+                <a
+                  href="https://wa.me/919100000000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full px-4 py-2 text-sm font-medium text-white bg-green-600 border border-transparent rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 flex items-center justify-center gap-2"
+                >
+                  <FaWhatsapp className="h-4 w-4" />
                   Enquire Now
-                </Link>
+                </a>
+                <DownloadBrochure 
+                  projectName="Hillside"
+                  brochurePath="/brochures/hillside-brochure.pdf"
+                />
               </div>
             </div>
           </div>
@@ -193,7 +204,7 @@ export default function HillsidePage() {
           <div className="max-w-4xl mx-auto">
             <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
               <Image 
-                src="https://northstarhomes.in/assets/images/Master-Plan-hillside.jpg" 
+                src="/images/hillside/Master-Plan-hillside.jpg" 
                 alt="Hillside Master Plan" 
                 fill 
                 style={{ objectFit: "contain" }}
@@ -212,13 +223,8 @@ export default function HillsidePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <Image
-                    src="/images/property-1.jpg"
-                    alt="Testimonial"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                  <span className="text-xl font-bold text-primary">RK</span>
                 </div>
                 <div>
                   <h4 className="font-bold">Ravi Kumar</h4>
@@ -232,13 +238,8 @@ export default function HillsidePage() {
             
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <Image
-                    src="/images/property-2.jpg"
-                    alt="Testimonial"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                  <span className="text-xl font-bold text-primary">PS</span>
                 </div>
                 <div>
                   <h4 className="font-bold">Priya Sharma</h4>

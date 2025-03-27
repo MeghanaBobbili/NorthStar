@@ -1,21 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface LogoProps {
   className?: string;
-  textColor?: string;
-  accentColor?: string;
 }
 
-const Logo = ({ 
-  className = "", 
-  textColor = "text-primary", 
-  accentColor = "text-accent" 
-}: LogoProps) => {
+const Logo = ({ className = "" }: LogoProps) => {
   return (
     <Link href="/" className={`flex items-center ${className}`}>
-      <span className={`text-2xl font-playfair font-bold ${textColor}`}>
-        Northstar<span className={accentColor}>Homes</span>
-      </span>
+      <Image
+        src="/images/scrolled-logo.png"
+        alt="Northstar Homes"
+        width={200}
+        height={50}
+        className="h-auto"
+      />
     </Link>
   );
 };

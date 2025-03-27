@@ -101,7 +101,7 @@ export default function Home() {
     {
       title: "ALLURA",
       subtitle: "LUXURY VILLAS IN KOKAPET, HYDERABAD",
-      image: "/images/allura-banner2.jpg",
+      image: "/images/Allura-ongoing-project-632-x-946.jpg",
       link: "/hyderabad/ongoing/allura",
     },
     {
@@ -123,7 +123,7 @@ export default function Home() {
     {
       title: "PARK AVENUE",
       subtitle: "PARK AVE - 2, 2.5, 3 BHK PREMIUM APARTMENTS AT MADHURAWADA VISAKHAPATNAM",
-      image: "/images/parkave-banner2.jpg",
+      image: "/images/park-ave-va/parkave-banner2.jpg",
       link: "/vizag/ongoing/park-avenue",
     },
     {

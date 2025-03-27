@@ -49,7 +49,7 @@ export default function VizagPage() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
               <div className="relative h-[250px]">
                 <Image 
-                  src="/images/property-1.jpg" 
+                  src="/images/goldenvalley/goldenvelly2.jpg" 
                   alt="Ongoing Projects" 
                   fill
                   style={{ objectFit: "cover" }}
@@ -93,7 +93,7 @@ export default function VizagPage() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
               <div className="relative h-[250px]">
                 <Image 
-                  src="/images/property-2.jpg" 
+                  src="https://images.unsplash.com/photo-1542747527-122025b13094?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHVyYmFufGVufDB8fDB8fHww" 
                   alt="Upcoming Projects" 
                   fill
                   style={{ objectFit: "cover" }}
@@ -135,7 +135,7 @@ export default function VizagPage() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
               <div className="relative h-[250px]">
                 <Image 
-                  src="/images/property-3.jpg" 
+                  src="/images/eden-garden-va/DJI_0394.jpg" 
                   alt="Completed Projects" 
                   fill
                   style={{ objectFit: "cover" }}
@@ -162,14 +162,12 @@ export default function VizagPage() {
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
                     <FaMapMarkerAlt className="text-primary mt-1 mr-2 flex-shrink-0" />
-                    <span>Coastal Heights - Premium Apartments</span>
-                  </li>
-                  <li className="flex items-start">
-                    <FaMapMarkerAlt className="text-primary mt-1 mr-2 flex-shrink-0" />
-                    <span>Marina Bay - Luxury Villa Township</span>
+                    <span>Eden Garden - Luxury Apartments in Rushikonda</span>
                   </li>
                 </ul>
-                <span className="text-gray-500 italic block mb-4">Details coming soon</span>
+                <Link href="/vizag/completed" className="btn-primary inline-block">
+                  View Project Details <FaArrowRight className="ml-2 inline" />
+                </Link>
               </div>
             </div>
           </div>

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaBuilding, FaRulerCombined, FaWater, FaTree, FaCar, FaArrowRight } from 'react-icons/fa';
 import ImageCarousel from '@/components/ImageCarousel';
+import DownloadBrochure from '@/components/DownloadBrochure';
 
 export default function VedaPage() {
   // Project details
@@ -33,7 +34,7 @@ export default function VedaPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://northstarhomes.in/assets/images/HS_G_978x418-3.jpg')" }}>
+      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('/images/veda//HS_G_978x418-3.jpg')" }}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
@@ -82,9 +83,9 @@ export default function VedaPage() {
               <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <ImageCarousel 
                   images={[
-                    { id: 1, src: "https://northstarhomes.in/assets/images/vedabanner.jpg", alt: "Veda Banner" },
-                    { id: 2, src: "https://northstarhomes.in/assets/images/VEDA_G_978x418-3.jpg", alt: "Veda View 1" },
-                    { id: 3, src: "https://northstarhomes.in/assets/images/HS_G_978x418-3.jpg", alt: "Veda View 2" },
+                    { id: 1, src: "/images/veda/vedabanner.jpg", alt: "Veda Banner" },
+                    { id: 2, src: "/images/veda//VEDA_G_978x418-3.jpg", alt: "Veda View 1" },
+                    { id: 3, src: "/images/veda//HS_G_978x418-3.jpg", alt: "Veda View 2" },
                   ]} 
                 />
               </div>
@@ -126,10 +127,14 @@ export default function VedaPage() {
                 </div>
               </div>
               
-              <div className="pt-6 border-t border-gray-200">
+              <div className="pt-6 border-t border-gray-200 space-y-4">
                 <Link href="/contact" className="btn-primary w-full flex justify-center items-center">
                   Enquire Now
                 </Link>
+                <DownloadBrochure 
+                  projectName="Veda"
+                  brochurePath="/brochures/ghmc-approvedplans.pdf"
+                />
               </div>
             </div>
           </div>
@@ -201,7 +206,7 @@ export default function VedaPage() {
           <div className="bg-white p-6 rounded-lg shadow-md">
             <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
               <Image 
-                src="https://northstarhomes.in/assets/images/masterplanveda.jpg" 
+                src="/images/veda/masterplanveda.jpg" 
                 alt="Veda Master Plan" 
                 fill 
                 style={{ objectFit: "contain" }}
@@ -244,13 +249,8 @@ export default function VedaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <Image
-                    src="/images/property-3.jpg"
-                    alt="Testimonial"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                  <span className="text-xl font-bold text-primary">SK</span>
                 </div>
                 <div>
                   <h4 className="font-bold">Dr. Suresh Kumar</h4>
@@ -264,13 +264,8 @@ export default function VedaPage() {
             
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <Image
-                    src="/images/property-1.jpg"
-                    alt="Testimonial"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                  <span className="text-xl font-bold text-primary">LM</span>
                 </div>
                 <div>
                   <h4 className="font-bold">Lakshmi Menon</h4>

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaBuilding, FaRulerCombined, FaLeaf, FaSwimmingPool, FaCog, FaArrowRight } from 'react-icons/fa';
 import ImageCarousel from '@/components/ImageCarousel';
+import DownloadBrochure from '@/components/DownloadBrochure';
 
 export default function GardenSuitesPage() {
   // Project details
@@ -26,7 +27,7 @@ export default function GardenSuitesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1580202596255-8644f7a461e2?q=80&w=2067&auto=format&fit=crop')" }}>
+      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('/images/garden-suites/garden-suitsbanner.jpg')" }}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
@@ -75,9 +76,9 @@ export default function GardenSuitesPage() {
               <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <ImageCarousel 
                   images={[
-                    { id: 1, src: "https://northstarhomes.in/assets/images/garden-suitsbanner.jpg", alt: "Garden Suites Banner" },
-                    { id: 2, src: "https://northstarhomes.in/assets/images/GS_G_978x418-19.jpg", alt: "Garden Suites View 1" },
-                    { id: 3, src: "https://northstarhomes.in/assets/images/GS_G_978x418-3.jpg", alt: "Garden Suites View 2" },
+                    { id: 1, src: "/images/garden-suites/garden-suitsbanner.jpg", alt: "Garden Suites Banner" },
+                    { id: 2, src: "/images/garden-suites/GS_G_978x418-19.jpg", alt: "Garden Suites View 1" },
+                    { id: 3, src: "/images/garden-suites/GS_G_978x418-3.jpg", alt: "Garden Suites View 2" },
                   ]} 
                 />
               </div>
@@ -119,10 +120,14 @@ export default function GardenSuitesPage() {
                 </div>
               </div>
               
-              <div className="pt-6 border-t border-gray-200">
+              <div className="pt-6 border-t border-gray-200 space-y-4">
                 <Link href="/contact" className="btn-primary w-full flex justify-center items-center">
                   Enquire Now
                 </Link>
+                <DownloadBrochure 
+                  projectName="Garden Suites"
+                  brochurePath="/brochures/ghmc-approvedplans.pdf"
+                />
               </div>
             </div>
           </div>
@@ -191,12 +196,13 @@ export default function GardenSuitesPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Floor Plans</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="space-y-8">
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="relative h-[400px] rounded-lg overflow-hidden">
+              <h3 className="text-2xl font-bold mb-4 text-center">Ground Floor Plan</h3>
+              <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <Image 
-                  src="https://northstarhomes.in/assets/images/gardensuites1.jpg" 
-                  alt="Garden Suites Floor Plan 1" 
+                  src="/images/garden-suites/gardensuites1.jpg" 
+                  alt="Ground Floor Plan" 
                   fill 
                   style={{ objectFit: "contain" }}
                   className="rounded-lg"
@@ -205,10 +211,11 @@ export default function GardenSuitesPage() {
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="relative h-[400px] rounded-lg overflow-hidden">
+              <h3 className="text-2xl font-bold mb-4 text-center">First Floor Plan</h3>
+              <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <Image 
-                  src="https://northstarhomes.in/assets/images/gardensuites2.jpg" 
-                  alt="Garden Suites Floor Plan 2" 
+                  src="/images/garden-suites/gardensuites2.jpg" 
+                  alt="First Floor Plan" 
                   fill 
                   style={{ objectFit: "contain" }}
                   className="rounded-lg"
@@ -217,10 +224,11 @@ export default function GardenSuitesPage() {
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="relative h-[400px] rounded-lg overflow-hidden">
+              <h3 className="text-2xl font-bold mb-4 text-center">Second Floor Plan</h3>
+              <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <Image 
-                  src="https://northstarhomes.in/assets/images/gardensuites3.jpg" 
-                  alt="Garden Suites Floor Plan 3" 
+                  src="/images/garden-suites/gardensuites3.jpg" 
+                  alt="Second Floor Plan" 
                   fill 
                   style={{ objectFit: "contain" }}
                   className="rounded-lg"
@@ -263,13 +271,8 @@ export default function GardenSuitesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <Image
-                    src="https://images.unsplash.com/photo-1580202596255-8644f7a461e2?q=80&w=2067&auto=format&fit=crop"
-                    alt="Testimonial"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                  <span className="text-xl font-bold text-primary">SK</span>
                 </div>
                 <div>
                   <h4 className="font-bold">Sanjana Kapoor</h4>
@@ -283,13 +286,8 @@ export default function GardenSuitesPage() {
             
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <Image
-                    src="https://images.unsplash.com/photo-1555280712-c28e2035f00a?q=80&w=2070&auto=format&fit=crop"
-                    alt="Testimonial"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                  <span className="text-xl font-bold text-primary">RM</span>
                 </div>
                 <div>
                   <h4 className="font-bold">Raj Malhotra</h4>

@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaMapMarkerAlt, FaHome, FaRulerCombined, FaTree, FaSwimmingPool, FaShieldAlt, FaCheck, FaArrowRight } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaHome, FaRulerCombined, FaTree, FaSwimmingPool, FaShieldAlt, FaCheck, FaArrowRight, FaWhatsapp } from 'react-icons/fa';
 import ImageCarousel from '@/components/ImageCarousel';
+import DownloadBrochure from '@/components/DownloadBrochure';
 
 export default function AlluraPage() {
   // Project details
@@ -24,18 +25,18 @@ export default function AlluraPage() {
   };
 
   const thumbnails = [
-    { id: 1, src: "https://northstarhomes.in/assets/images/allura-sep.jpg", alt: "Allura Villa" },
-    { id: 2, src: "https://northstarhomes.in/assets/images/allura-banner1.jpg", alt: "Allura Villa" },
-    { id: 3, src: "https://northstarhomes.in/assets/images/allura-banner2.jpg", alt: "Allura Villa" },
-    { id: 4, src: "https://northstarhomes.in/assets/images/allura-banner3.jpg", alt: "Allura Villa" },
-    { id: 5, src: "https://northstarhomes.in/assets/images/allura-banner4.jpg", alt: "Allura Villa" },
-    { id: 6, src: "https://northstarhomes.in/assets/images/allura-banner5.jpg", alt: "Allura Villa" },
+    { id: 1, src: "/images/allura/allura-sep.jpg", alt: "Allura Villa" },
+    { id: 2, src: "/images/allura/allura-banner1.jpg", alt: "Allura Villa" },
+    { id: 3, src: "/images/allura/allura-banner2.jpg", alt: "Allura Villa" },
+    { id: 4, src: "/images/allura/allura-banner3.jpg", alt: "Allura Villa" },
+    { id: 5, src: "/images/allura/allura-banner4.jpg", alt: "Allura Villa" },
+    { id: 6, src: "/images/allura/allura-banner5.jpg", alt: "Allura Villa" },
   ];
 
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://northstarhomes.in/assets/images/allura-sep.jpg')" }}>
+      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('/images/allura/allura-sep.jpg')" }}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
@@ -124,10 +125,20 @@ export default function AlluraPage() {
                 </div>
               </div>
               
-              <div className="pt-6 border-t border-gray-200">
-                <Link href="/contact" className="btn-primary w-full flex justify-center items-center">
-                  Get in Touch
-                </Link>
+              <div className="space-y-4">
+                <a
+                  href="https://wa.me/919100000000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full px-4 py-2 text-sm font-medium text-white bg-green-600 border border-transparent rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 flex items-center justify-center gap-2"
+                >
+                  <FaWhatsapp className="h-4 w-4" />
+                  Enquire Now
+                </a>
+                <DownloadBrochure 
+                  projectName="Allura"
+                  brochurePath="/brochures/ghmc-approvedplans.pdf"
+                />
               </div>
             </div>
           </div>
@@ -176,7 +187,7 @@ export default function AlluraPage() {
           <h2 className="text-3xl font-bold mb-8 text-center">Master Plan</h2>
           <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
             <Image 
-              src="https://northstarhomes.in/assets/images/newallura-masterplan.jpg" 
+              src="/images/allura/newallura-masterplan.jpg" 
               alt="Allura Master Plan" 
               fill 
               style={{ objectFit: "contain" }}

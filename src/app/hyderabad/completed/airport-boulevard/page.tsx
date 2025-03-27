@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaMapMarkerAlt, FaHome, FaRulerCombined, FaPlane, FaRoad, FaLeaf, FaArrowRight } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaHome, FaRulerCombined, FaPlane, FaRoad, FaLeaf, FaArrowRight, FaBuilding, FaHistory } from 'react-icons/fa';
 import ImageCarousel from '@/components/ImageCarousel';
+import DownloadBrochure from '@/components/DownloadBrochure';
 
 export default function AirportBoulevardPage() {
   // Project details
@@ -26,7 +27,7 @@ export default function AirportBoulevardPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('https://northstarhomes.in/assets/images/AB_978x418-20.png')" }}>
+      <section className="relative h-[350px] bg-gray-900 bg-cover bg-center flex items-center" style={{ backgroundImage: "url('/images/airport-boulevard/AB_978x418-20.png')" }}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
@@ -75,9 +76,9 @@ export default function AirportBoulevardPage() {
               <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
                 <ImageCarousel 
                   images={[
-                    { id: 1, src: "https://northstarhomes.in/assets/images/airportbanner.jpg", alt: "Airport Boulevard Banner" },
-                    { id: 2, src: "https://northstarhomes.in/assets/images/AB_978x418-20.png", alt: "Airport Boulevard View 1" },
-                    { id: 3, src: "https://northstarhomes.in/assets/images/AB_978x418-22.png", alt: "Airport Boulevard View 2" },
+                    { id: 1, src: "/images/airport-boulevard/airportbanner.jpg", alt: "Airport Boulevard Banner" },
+                    { id: 2, src: "/images/airport-boulevard/AB_978x418-20.png", alt: "Airport Boulevard View 1" },
+                    { id: 3, src: "/images/airport-boulevard/AB_978x418-22.png", alt: "Airport Boulevard View 2" },
                   ]} 
                 />
               </div>
@@ -86,7 +87,7 @@ export default function AirportBoulevardPage() {
             {/* Right Column - Details */}
             <div className="bg-white p-6 rounded-lg shadow-md h-fit">
               <div className="mb-2">
-                <span className="text-sm font-medium bg-success/10 text-success px-3 py-1 rounded-full">
+                <span className="text-sm font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">
                   COMPLETED PROJECT
                 </span>
               </div>
@@ -119,10 +120,14 @@ export default function AirportBoulevardPage() {
                 </div>
               </div>
               
-              <div className="pt-6 border-t border-gray-200">
+              <div className="pt-6 border-t border-gray-200 space-y-4">
                 <Link href="/contact" className="btn-primary w-full flex justify-center items-center">
                   Enquire Now
                 </Link>
+                <DownloadBrochure 
+                  projectName="Airport Boulevard"
+                  brochurePath="/brochures/airport-boulevard-brochure.pdf"
+                />
               </div>
             </div>
           </div>
@@ -193,7 +198,7 @@ export default function AirportBoulevardPage() {
           <div className="bg-white p-6 rounded-lg shadow-md">
             <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
               <Image 
-                src="https://northstarhomes.in/assets/images/masterplan-b.jpg" 
+                src="/images/airport-boulevard/masterplan-b.jpg" 
                 alt="Airport Boulevard Master Plan" 
                 fill 
                 style={{ objectFit: "contain" }}
@@ -245,13 +250,8 @@ export default function AirportBoulevardPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <Image
-                    src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?q=80&w=2074&auto=format&fit=crop"
-                    alt="Testimonial"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                  <span className="text-xl font-bold text-primary">RK</span>
                 </div>
                 <div>
                   <h4 className="font-bold">Rahul Khanna</h4>
@@ -265,13 +265,8 @@ export default function AirportBoulevardPage() {
             
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <Image
-                    src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop"
-                    alt="Testimonial"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                  <span className="text-xl font-bold text-primary">MG</span>
                 </div>
                 <div>
                   <h4 className="font-bold">Meera Gupta</h4>

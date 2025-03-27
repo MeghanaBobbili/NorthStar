@@ -10,7 +10,7 @@ export default function BlogPage() {
     date: "August 15, 2024",
     author: "Rajesh Kumar",
     category: "Market Trends",
-    image: "/images/property-1.jpg"
+    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D"
   };
 
   const blogPosts = [
@@ -21,7 +21,7 @@ export default function BlogPage() {
       date: "July 28, 2024",
       author: "Priya Sharma",
       category: "Investment",
-      image: "/images/property-2.jpg"
+      image: "https://images.unsplash.com/flagged/photo-1558954157-aa76c0d246c6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ export default function BlogPage() {
       date: "July 15, 2024",
       author: "Arun Patel",
       category: "Sustainability",
-      image: "/images/property-3.jpg"
+      image: "https://images.unsplash.com/photo-1531321538006-82b62d9fbb1f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3VzdGFpbmFibGUlMjBidWlsZGluZ3N8ZW58MHx8MHx8fDA%3D"
     },
     {
       id: 4,
@@ -39,7 +39,7 @@ export default function BlogPage() {
       date: "June 30, 2024",
       author: "Sneha Reddy",
       category: "Buying Guide",
-      image: "/images/about-img.jpg"
+      image: "https://images.unsplash.com/photo-1533561797500-4fad4750814e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z3VpZGV8ZW58MHx8MHx8fDA%3D"
     },
     {
       id: 5,
@@ -48,7 +48,7 @@ export default function BlogPage() {
       date: "June 15, 2024",
       author: "Vikram Nair",
       category: "Interior Design",
-      image: "/images/property-1.jpg"
+      image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aW50ZXJpb3IlMjBkZXNpZ24lMjB0cmVtZHN8ZW58MHx8MHx8fDA%3D"
     },
     {
       id: 6,
@@ -57,7 +57,7 @@ export default function BlogPage() {
       date: "May 28, 2024",
       author: "Kamal Joshi",
       category: "Investment",
-      image: "/images/property-2.jpg"
+      image: "https://images.unsplash.com/photo-1588720516255-fc99581c9716?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aW1wYWN0fGVufDB8fDB8fHww"
     },
   ];
 

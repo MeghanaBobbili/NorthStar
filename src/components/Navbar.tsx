@@ -27,7 +27,6 @@ const menuItems = [
     submenu: [
       { name: "Ongoing", path: "/hyderabad/ongoing" },
       { name: "Completed", path: "/hyderabad/completed" },
-      { name: "Upcoming", path: "/hyderabad/upcoming" },
     ],
   },
   {
@@ -111,7 +110,9 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center px-4">
           <div className="flex items-center">
             <FaPhone className="mr-2" />
-            <span>+91 8657553355</span>
+            <a href="tel:+918657553355" className="hover:text-primary transition-colors">
+              +91 8657553355
+            </a>
           </div>
           <div className="flex space-x-3">
             <a href="https://www.facebook.com/NorthstarHomesProjects" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-white hover:text-primary transition-colors">

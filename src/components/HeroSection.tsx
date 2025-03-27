@@ -11,7 +11,7 @@ const heroSlides = [
     subtitle: "Premium Living Spaces Designed For Those Who Seek the Essence of Luxury",
     ctaText: "Explore Properties",
     ctaLink: "/properties",
-    image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=2084&auto=format&fit=crop",
+    image: "images/sanctuary/sanctuary-clubhouse.jpg",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const heroSlides = [
     subtitle: "Exceptional Gated Community Apartments & Villas in Prime Locations",
     ctaText: "View Hyderabad Projects",
     ctaLink: "/hyderabad/ongoing",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop",
+    image: "/images/sp_palacio-banner1.jpg",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const heroSlides = [
     subtitle: "Premium Waterfront Living with Breathtaking Views",
     ctaText: "View Vizag Projects",
     ctaLink: "/vizag/ongoing",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop",
+    image: "/images/goldenvalley/GV_BUILDING01.jpg",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const heroSlides = [
     subtitle: "Discover our gallery, blog, career opportunities and partnership programs",
     ctaText: "View Gallery",
     ctaLink: "/gallery",
-    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=2067&auto=format&fit=crop",
+    image: "/images/allura/978x418-Allura-Gallery-12.jpg",
   }
 ];
 

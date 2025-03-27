@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <Logo textColor="text-white" accentColor="text-primary" className="mb-4" />
+            <Logo className="mb-4" />
             <p className="text-gray-300 mb-4">
               Your trusted partner in finding your dream home. We specialize in luxury properties 
               and personalized real estate services in Hyderabad and Visakhapatnam.
