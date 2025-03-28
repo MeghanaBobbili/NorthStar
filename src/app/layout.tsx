@@ -31,7 +31,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} font-sans`}>
         <Navbar />
-        <main>{children}</main>
+        <div className="pt-[120px]">
+          <main>{children}</main>
+        </div>
         <Footer />
         <AzureChatbot />
       </body>
