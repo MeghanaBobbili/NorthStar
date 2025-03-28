@@ -3,7 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import DialogflowChatbot from "@/components/DialogflowChatbot";
+import AzureChatbot from "@/components/AzureChatbot";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,7 +33,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <DialogflowChatbot />
+        <AzureChatbot />
       </body>
     </html>
   );
