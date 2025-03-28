@@ -26,7 +26,7 @@ export async function POST(request: Request) {
       `)
       .eq('visitor_id', visitorId)
       .eq('downloads.project_name', projectName)
-      .order('created_at', { foreignTable: 'downloads', ascending: false })
+      .order('downloads.created_at', { ascending: false })
       .limit(1)
       .single();
 
