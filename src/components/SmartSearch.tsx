@@ -9,8 +9,9 @@ const mockProperties = [
   { id: 1, name: "Allura", type: "2BHK", location: "Hyderabad", price: "75L", path: "/hyderabad/ongoing/allura" },
   { id: 2, name: "SP Palacio", type: "3BHK", location: "Hyderabad", price: "85L", path: "/hyderabad/ongoing/sp-palacio" },
   { id: 3, name: "Sanctuary", type: "Villa", location: "Hyderabad", price: "1.2Cr", path: "/hyderabad/ongoing/sanctuary" },
-  { id: 4, name: "Park Avenue", type: "2BHK,2.5BHK,3BHK", location: "Visakhapatnam, Vizag", price: "45L", path: "/vizag/ongoing/park-avenue" },
-  { id: 5, name: "Golden Valley", type: "2.5BHK,3BHK,3.5BHK", location: "Visakhapatnam, Vizag", price: "55L", path: "/vizag/ongoing/golden-valley" },
+  { id: 4, name: "Airport Boulevard Commercial", type: "Commercial", location: "Hyderabad", price: "20l onwards", path: "/hyderabad/ongoing/airport-boulevard-commercial" },
+  { id: 5, name: "Park Avenue", type: "2BHK,2.5BHK,3BHK", location: "Visakhapatnam, Vizag", price: "45L", path: "/vizag/ongoing/park-avenue" },
+  { id: 6, name: "Golden Valley", type: "2.5BHK,3BHK,3.5BHK", location: "Visakhapatnam, Vizag", price: "55L", path: "/vizag/ongoing/golden-valley" },
 ];
 
 interface SearchResult {
