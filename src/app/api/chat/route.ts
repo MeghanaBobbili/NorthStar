@@ -115,7 +115,7 @@ const projects = [
     Location: "Hyderabad",
     description: "85 Luxury Villas in Kokapet",
     url: "/hyderabad/ongoing/allura"
-  },  
+  },
   {
     name: "SANCTUARY",
     Location: "Hyderabad",
@@ -148,14 +148,14 @@ function getProjectResponse(message: string) {
 
   // Detect location
   let location = "";
-  if (msg.includes("hyderabad")||msg.includes("hyd")) {
+  if (msg.includes("hyderabad") || msg.includes("hyd")) {
     location = "Hyderabad";
-  } else if (msg.includes("vizag") || msg.includes("visakhapatnam")||msg.includes("vskp")||msg.includes("vishakapatnam")) {
+  } else if (msg.includes("vizag") || msg.includes("visakhapatnam") || msg.includes("vskp") || msg.includes("vishakapatnam")) {
     location = "Visakhapatnam";
   }
 
   // If no city mentioned and no project-related keywords, skip static response
-  const keywords = ["project", "projects", "homes", "property", "properties","Ongoing","Ongoing Projects","Ongoing Projects in Hyderabad","Ongoing Projects in Visakhapatnam"];
+  const keywords = ["project", "projects", "homes", "property", "properties", "Ongoing", "Ongoing Projects", "Ongoing Projects in Hyderabad", "Ongoing Projects in Visakhapatnam"];
   const hasKeywords = keywords.some((keyword) => msg.includes(keyword));
 
   if (!location && !hasKeywords) {

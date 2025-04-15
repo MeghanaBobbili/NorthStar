@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaPhone, FaBars, FaTimes, FaChevronDown, FaChevronRight, FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import Logo from "./Logo";
+import SmartSearch from "./SmartSearch";
 
 // Define menu structure
 const menuItems = [
@@ -106,11 +107,11 @@ const Navbar = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-gray-900 text-white py-2">
+      <div className="bg-[#111827] text-white py-2">
         <div className="container mx-auto flex justify-between items-center px-4">
           <div className="flex items-center">
             <FaPhone className="mr-2" />
-            <a href="tel:+918657553355" className="hover:text-primary transition-colors">
+            <a href="tel:+918657553355" className="hover:text-accent transition-colors">
               +91 8657553355
             </a>
           </div>
@@ -147,24 +148,24 @@ const Navbar = () => {
               {menuItems.map((item, index) => (
                 <div key={index} className="relative" onClick={() => item.submenu && toggleDropdown(index)}>
                   {item.submenu ? (
-                    <button className="flex items-center text-gray-800 hover:text-primary px-1 py-2 font-medium">
+                    <button className="flex items-center text-[#111827] hover:text-primary px-1 py-2 font-medium">
                       {item.name}
                       <FaChevronDown className={`ml-1 h-3 w-3 transition-transform ${openDropdown === index ? 'rotate-180' : ''}`} />
                     </button>
                   ) : (
-                    <Link href={item.path} className="text-gray-800 hover:text-primary px-1 py-2 font-medium">
+                    <Link href={item.path} className="text-[#111827] hover:text-primary px-1 py-2 font-medium">
                       {item.name}
                     </Link>
                   )}
 
                   {/* Dropdown Menu */}
                   {item.submenu && openDropdown === index && (
-                    <div className="absolute top-full left-0 mt-1 bg-white shadow-md rounded-md py-2 min-w-[200px] z-20">
+                    <div className="absolute top-full left-0 mt-1 bg-white shadow-lg rounded-md py-2 min-w-[200px] z-20 border border-gray-100">
                       {item.submenu.map((subItem, subIndex) => (
                         <Link
                           key={subIndex}
                           href={subItem.path}
-                          className="block px-4 py-2 text-gray-800 hover:bg-primary hover:text-white"
+                          className="block px-4 py-2 text-gray-800 hover:bg-primary hover:text-white transition-colors"
                         >
                           {subItem.name}
                         </Link>
@@ -173,33 +174,38 @@ const Navbar = () => {
                   )}
                 </div>
               ))}
+              {/* Add SmartSearch component */}
+              <SmartSearch />
             </div>
 
             {/* Mobile Navigation Toggle */}
-            <button 
-              className="lg:hidden text-gray-800"
-              onClick={toggleMenu}
-              aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
-            >
-              {isMenuOpen ? (
-                <FaTimes className="h-6 w-6" />
-              ) : (
-                <FaBars className="h-6 w-6" />
-              )}
-            </button>
+            <div className="flex items-center space-x-4 lg:hidden">
+              <SmartSearch />
+              <button 
+                className="text-[#111827] hover:text-primary"
+                onClick={toggleMenu}
+                aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+              >
+                {isMenuOpen ? (
+                  <FaTimes className="h-6 w-6" />
+                ) : (
+                  <FaBars className="h-6 w-6" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-gray-100">
-            <div className="px-4 py-3 space-y-1 divide-y divide-gray-100">
+          <div className="lg:hidden bg-[#004B8D] border-t border-accent/20">
+            <div className="px-4 py-3 space-y-1 divide-y divide-accent/20">
               {menuItems.map((item, index) => (
                 <div key={index} className="py-2">
                   {item.submenu ? (
                     <>
                       <button 
-                        className="flex items-center justify-between w-full text-gray-800 hover:text-primary py-2"
+                        className="flex items-center justify-between w-full text-white hover:text-accent py-2"
                         onClick={() => toggleMobileSubmenu(index)}
                       >
                         {item.name}
@@ -207,12 +213,12 @@ const Navbar = () => {
                       </button>
                       
                       {openMobileSubmenu === index && (
-                        <div className="pl-4 mt-2 space-y-1 border-l-2 border-gray-100">
+                        <div className="pl-4 mt-2 space-y-1 border-l-2 border-accent/20">
                           {item.submenu.map((subItem, subIndex) => (
                             <Link
                               key={subIndex}
                               href={subItem.path}
-                              className="block py-2 text-gray-700 hover:text-primary"
+                              className="block py-2 text-gray-300 hover:text-accent"
                               onClick={toggleMenu}
                             >
                               <FaChevronRight className="inline-block mr-2 h-3 w-3" />
@@ -225,7 +231,7 @@ const Navbar = () => {
                   ) : (
                     <Link 
                       href={item.path} 
-                      className="block py-2 text-gray-800 hover:text-primary"
+                      className="block py-2 text-white hover:text-accent"
                       onClick={toggleMenu}
                     >
                       {item.name}

@@ -104,23 +104,23 @@ const AzureChatbot = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: `projects in ${location}` }),
       });
-  
+
       const data = await response.json();
-  
+
       const assistantMessage: Message = {
         role: "assistant",
         content: data.message,
       };
-  
+
       // Show message suggesting the *other* city only
       const otherLocation = location === "Hyderabad" ? "Visakhapatnam" : "Hyderabad";
-  
+
       const followUpMessage: Message = {
         role: "assistant",
         content: `Would you like to explore our projects in ${otherLocation}?`,
         type: "button",
       };
-  
+
       setMessages((prev) => [...prev, assistantMessage, followUpMessage]);
     } catch (error) {
       console.error("Error:", error);
@@ -135,7 +135,7 @@ const AzureChatbot = () => {
       setIsLoading(false);
     }
   };
-  
+
 
   const renderContent = (content: string) => {
     const linkified = content.replace(
@@ -162,9 +162,8 @@ const AzureChatbot = () => {
 
       {/* Chat Window with animation */}
       <div
-        className={`fixed bottom-20 right-4 w-96 h-[600px] bg-white rounded-lg shadow-xl flex flex-col z-50 transform transition-all duration-300 ease-out origin-bottom-right ${
-          isOpen ? "scale-100 opacity-100" : "scale-0 opacity-0 pointer-events-none"
-        }`}
+        className={`fixed bottom-20 right-4 w-96 h-[600px] bg-white rounded-lg shadow-xl flex flex-col z-50 transform transition-all duration-300 ease-out origin-bottom-right ${isOpen ? "scale-100 opacity-100" : "scale-0 opacity-0 pointer-events-none"
+          }`}
       >
         {/* Header */}
         <div className="bg-primary text-white p-4 rounded-t-lg flex justify-between items-center">
@@ -185,9 +184,8 @@ const AzureChatbot = () => {
               className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
             >
               <div
-                className={`max-w-[80%] rounded-lg p-3 ${
-                  message.role === "user" ? "bg-primary text-white" : "bg-gray-100 text-gray-800"
-                }`}
+                className={`max-w-[80%] rounded-lg p-3 ${message.role === "user" ? "bg-primary text-white" : "bg-gray-100 text-gray-800"
+                  }`}
               >
                 <div className="flex items-start">
                   {message.role === "user" ? (
@@ -196,25 +194,25 @@ const AzureChatbot = () => {
                     <FaComments className="w-5 h-5 mr-2 mt-1" />
                   )}
                   {message.type === "button" ? (
-  <div className="flex space-x-2">
-    {message.content.includes("Hyderabad") && (
-      <button
-        className="bg-primary text-white p-2 rounded-lg hover:bg-primary-dark"
-        onClick={() => handleLocationClick("Hyderabad")}
-      >
-        Hyderabad
-      </button>
-    )}
-    {message.content.includes("Vizag") || message.content.includes("Visakhapatnam") ? (
-      <button
-        className="bg-primary text-white p-2 rounded-lg hover:bg-primary-dark"
-        onClick={() => handleLocationClick("Visakhapatnam")}
-      >
-        Vizag
-      </button>
-    ) : null}
-  </div>
-) : (
+                    <div className="flex space-x-2">
+                      {message.content.includes("Hyderabad") && (
+                        <button
+                          className="bg-primary text-white p-2 rounded-lg hover:bg-primary-dark"
+                          onClick={() => handleLocationClick("Hyderabad")}
+                        >
+                          Hyderabad
+                        </button>
+                      )}
+                      {message.content.includes("Vizag") || message.content.includes("Visakhapatnam") ? (
+                        <button
+                          className="bg-primary text-white p-2 rounded-lg hover:bg-primary-dark"
+                          onClick={() => handleLocationClick("Visakhapatnam")}
+                        >
+                          Vizag
+                        </button>
+                      ) : null}
+                    </div>
+                  ) : (
 
                     <div
                       className="whitespace-pre-wrap"
