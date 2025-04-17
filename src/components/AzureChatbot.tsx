@@ -71,8 +71,17 @@ const AzureChatbot = () => {
       const assistantMessage: Message = {
         role: "assistant",
         content: data.message,
+        type: "text"
       };
-      setMessages((prev) => [...prev, assistantMessage]);
+      
+      // Add location buttons after the response
+      const locationButtons: Message = {
+        role: "assistant",
+        content: "Would you like to explore our projects in",
+        type: "button"
+      };
+
+      setMessages((prev) => [...prev, assistantMessage, locationButtons]);
     } catch (error) {
       console.error("Error:", error);
       setMessages((prev) => [
@@ -80,7 +89,13 @@ const AzureChatbot = () => {
         {
           role: "assistant",
           content: "Sorry, I encountered an error. Please try again.",
+          type: "text"
         },
+        {
+          role: "assistant",
+          content: "Would you like to explore our projects in",
+          type: "button"
+        }
       ]);
     } finally {
       setIsLoading(false);
@@ -90,10 +105,10 @@ const AzureChatbot = () => {
   const handleLocationClick = (location: string) => {
     setMessages((prev) => [
       ...prev,
-      { role: "assistant", content: `Here are the ongoing projects in ${location}:`, type: "text" },
+      { role: "assistant", content: `Here are the ongoing projects in ${location}:`, type: "text" }
     ]);
 
-    fetchProjects(location); // Fetching the projects based on the location
+    fetchProjects(location);
   };
 
   const fetchProjects = async (location: string) => {
@@ -110,18 +125,17 @@ const AzureChatbot = () => {
       const assistantMessage: Message = {
         role: "assistant",
         content: data.message,
+        type: "text"
       };
 
-      // Show message suggesting the *other* city only
-      const otherLocation = location === "Hyderabad" ? "Visakhapatnam" : "Hyderabad";
-
-      const followUpMessage: Message = {
+      // Add location buttons after the response
+      const locationButtons: Message = {
         role: "assistant",
-        content: `Would you like to explore our projects in ${otherLocation}?`,
-        type: "button",
+        content: "Would you like to explore our projects in",
+        type: "button"
       };
 
-      setMessages((prev) => [...prev, assistantMessage, followUpMessage]);
+      setMessages((prev) => [...prev, assistantMessage, locationButtons]);
     } catch (error) {
       console.error("Error:", error);
       setMessages((prev) => [
@@ -129,13 +143,18 @@ const AzureChatbot = () => {
         {
           role: "assistant",
           content: "Sorry, I couldn't fetch the projects at the moment.",
+          type: "text"
         },
+        {
+          role: "assistant",
+          content: "Would you like to explore our projects in",
+          type: "button"
+        }
       ]);
     } finally {
       setIsLoading(false);
     }
   };
-
 
   const renderContent = (content: string) => {
     const linkified = content.replace(
@@ -195,25 +214,20 @@ const AzureChatbot = () => {
                   )}
                   {message.type === "button" ? (
                     <div className="flex space-x-2">
-                      {message.content.includes("Hyderabad") && (
-                        <button
-                          className="bg-primary text-white p-2 rounded-lg hover:bg-primary-dark"
-                          onClick={() => handleLocationClick("Hyderabad")}
-                        >
-                          Hyderabad
-                        </button>
-                      )}
-                      {message.content.includes("Vizag") || message.content.includes("Visakhapatnam") ? (
-                        <button
-                          className="bg-primary text-white p-2 rounded-lg hover:bg-primary-dark"
-                          onClick={() => handleLocationClick("Visakhapatnam")}
-                        >
-                          Vizag
-                        </button>
-                      ) : null}
+                      <button
+                        className="bg-primary text-white p-2 rounded-lg hover:bg-primary-dark"
+                        onClick={() => handleLocationClick("Hyderabad")}
+                      >
+                        Hyderabad
+                      </button>
+                      <button
+                        className="bg-primary text-white p-2 rounded-lg hover:bg-primary-dark"
+                        onClick={() => handleLocationClick("Visakhapatnam")}
+                      >
+                        Vizag
+                      </button>
                     </div>
                   ) : (
-
                     <div
                       className="whitespace-pre-wrap"
                       dangerouslySetInnerHTML={renderContent(message.content)}
